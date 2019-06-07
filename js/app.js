@@ -16,6 +16,20 @@ $(document).ready(function() {
             videoI.get(0).pause();
         }
     })
+
+    // button categorias plus
+    var cate_p = true;
+    $('.categorias_title').on('click', function() {
+        if (cate_p == true) {
+            $('.categorias_title .plus_c i').css('transform', 'rotate(0deg)');
+            $('.accordion').hide('fast');
+            cate_p=false;
+        } else {
+            $('.categorias_title .plus_c i').css('transform', 'rotate(45deg)');
+            $('.accordion').show('fast');
+            cate_p=true;
+        }
+    })
     
     // mision y vision 
     
@@ -336,6 +350,7 @@ $(document).ready(function() {
         },
       });
     });
+      
     $("#modalScroll").on("click", function(){
         if (!$("body").hasClass("disabled-onepage-scroll")) {
              $(window).on("keydown", function(e) {
