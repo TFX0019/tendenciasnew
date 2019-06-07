@@ -7,10 +7,13 @@
 		<link rel="stylesheet" href="css/bootstrap.css">
 		<link rel="stylesheet" href="css/animate.css">
 		<link rel="stylesheet" href="css/font-awesome.css">
+		<link rel="stylesheet" href="css/owl.carousel.css">
+		<link rel="stylesheet" href="css/owl.theme.default.css">
 		<link rel="stylesheet" href="css/onepage-scroll.css">
 		<link rel="stylesheet" href="css/bulls.css">
 		<link rel="stylesheet" href="css/custom.css">
 		<link rel="stylesheet" href="css/medias.css">
+		<script>var pagin = 'familia';</script>
 	<title>Tendencias | FAMILIA</title>
 </head>
 <body>
@@ -98,7 +101,7 @@
 			</figure>
 			<div class="caption_n link_rose"><span>Gira Pre Venta Campaña 1 - Puerto Ordaz, 2019</span></div>
 		</div>
-		<div class="col-md-6 px-5a a4 animated">
+		<div class="col-md-6 px-5 a4 animated">
 			<h1 class="link_rose m-0 p-0"><strong>Tendencias</strong></h1>
 			<h5 class="m-0 p-0">Somos Familia.</h5>
 			<p class="m-0 p-0">Una vez que empiezas con nosotros formas parte de una familia que estará contigo apoyándote para construir tu propio
@@ -112,6 +115,39 @@ que pertenecen a nuestra Familia.</p>
 	<img src="images/libelula-d.svg" alt="">
 </div>
 		</section> <!-- end somos familia -->
+
+	<section> <!-- revista -->
+		<div class="w-100 d-flex" style="margin-top: 15%"> <!-- carousel -->
+	<div class="collaje owl-carousel owl-theme clearfix" style="width: 60%;">
+		<div class="item" >
+			<img src="images/familia-s-1.jpg" class="w-100 full-collaje-height element-center auto-width" alt="">
+		</div>
+		<div class="item" >
+			<img src="images/familia-s-2.jpg" class="w-100 full-collaje-height element-center auto-width" alt="">
+		</div>
+		<div class="item" >
+			<img src="images/familia-s-3.jpg" class="w-100 full-collaje-height element-center auto-width" alt="">
+		</div>
+		<div class="item" >
+			<img src="images/familia-s-1.jpg" class="w-100 full-collaje-height element-center auto-width" alt="">
+		</div>
+		<div class="item" >
+			<img src="images/familia-s-2.jpg" class="w-100 full-collaje-height element-center auto-width" alt="">
+		</div>
+	</div>
+	</div> <!-- end carousel -->
+	
+	
+<div class="w-100" ><!-- download collage -->
+	<div class="d-flex justify-content-center align-items-center">
+		<a href="" class="text-center pr-3 text-muted text_d_none"><img src="images/donwloader.svg" alt="" class="" width="20" height="20"></a>
+	</div>
+	<div class="mt-4">
+		<h4 class="text-muted text-uppercase text-center">Collage líneas</h4>
+		<p class="link_rose montserrat text-center txt_l text_color"><i>Campaña 03 -2018</i></p>
+	</div>
+</div><!-- end download collage  -->
+	</section> <!-- end revista -->
 
 <section>
 	<!-- footer -->
@@ -168,12 +204,38 @@ que pertenecen a nuestra Familia.</p>
 <script src="js/jquery.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/wow.min.js"></script>
+<script src="js/owl.carousel.js"></script>
 <script src="js/jquery.onepage-scroll.js"></script>
 <script src="js/bulls.js"></script>
 <script src="js/app.js"></script>
 <script>
     new WOW().init();
 </script>
+    <script>
+        $(document).ready(function() {
+              var owl = $('.collaje');
+              owl.owlCarousel({
+                center:true,
+                responsive: {
+                    0: {
+                      center:true,
+                        items: 1,
+                         margin: -200,
+                        dots:false,
+                       nav:false
+                    },
+                    850: {
+                      center:true,
+                    margin: -200,
+                items: 3,
+                loop: true,
+                dots:false,
+                nav:true,
+                }
+                }
+              })
+            })
+    </script>
 <script>
 $(".wow").addClass("fixEffect");
 </script>

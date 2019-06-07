@@ -124,6 +124,7 @@ button.close {
   transition: 0.5s;
   color: rgba(217, 4, 102, 1);
 }
+
 .portafolio{
       width: 20px;
       
@@ -411,26 +412,29 @@ footer .red-social-footer a:hover {
 }
 
 .item .item__division:nth-child(1) {
-    width: 70%;
+    width: 100%;
 }
 .item .item__division:nth-child(2) {
     width: 40%;
     margin-left: -10%;
 }
-.valores__corporativos {
-    position: absolute;
-    bottom: 0;
+.nav_owl button {
+  margin-top: 20px;
+  background: none;
+  border: none;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
 }
-
+.nav_owl button:focus {
+  outline: none;
+}
 .video-wrapper {
     position: relative;
 }
 
 .video-wrapper > video {
-    /*
-    old
-    width: 100%;
-    */
+
     width: auto;
     vertical-align: middle;
 }
@@ -475,13 +479,54 @@ footer .red-social-footer a:hover {
 	opacity: .2;
 }
 
-.face_yt {
+.bg_f {
 	width: 100%;
-	height: 80vh;
+	height: 100vh;
 	background: url(../images/rostros.png);
 	background-position: center center;
 	background-size:cover;
 	opacity: .7;
+}
+.face_yt {
+  text-align: left;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin: 20px;
+}
+.face_yt:hover {
+  text-decoration: none;
+}
+.face_yt img {
+  width: 40px;
+  height: 40px;
+}
+.face_yt div p {
+  margin: 0;
+  padding: 0;
+  margin-left: 10px;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1;
+}
+.face_yt div .small {
+  font-size: 10px;
+}
+
+.btn_fv {
+  border: none;
+  border: 2px solid;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border-color: #fff;
+  color: rgb(217,4,102);
+  background: #fff;
+  box-shadow: 0 0 8px rgba(0,0,0,.35);
+  cursor: pointer;
+}
+.btn_fv:focus {
+  outline: none;
 }
 
 #view_videoo {
@@ -493,10 +538,10 @@ footer .red-social-footer a:hover {
   position: fixed;
   z-index: 99;
   right: 0;
-  top: 20%;
+  top: 14%;
   background: #fff;
   box-shadow: 0 0 10px rgba(0,0,0,.35);
-  padding: 20px 0px;
+  padding: 10px 0px;
   border-radius: 50px 0px 0px 50px;
 }
 .categorias_c .categorias_title {
@@ -505,14 +550,19 @@ footer .red-social-footer a:hover {
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
   letter-spacing: 2px;
-  padding: 0 40px;
+  padding: 0 20px;
   cursor: pointer;
+  transition: all ease-in-out .3s;
 }
-.categorias_title .plus_c i {
+.categorias_title img {
+  width: 20px;
   transform: rotate(45deg);
   transition: all ease-in-out .3s;
 }
 
+.categorias_c .categorias_title:hover {
+  width: 135px;
+}
 .card-header {
   background-color: rgb(241,241,241);
   border: none;
@@ -573,22 +623,23 @@ footer .red-social-footer a:hover {
 }
 .slect_c {
   text-align: center;
-  width: 70%;
+  width: 90%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .slect_c button {
   background: none;
-  width: 50px;
+  width: 25px;
+  height: 25px;
   border: none;
   cursor: pointer;
 }
-.slect_c button:hover {
+.slect_c button:focus {
   outline: none;
 }
 .select_items_collec {
-  width: 90%;
+  width: 85%;
   margin-top: 10px;
 }
 .select_items_collec item {
