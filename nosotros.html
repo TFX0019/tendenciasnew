@@ -98,8 +98,8 @@
 			</div>
 
 <!-- video -->
-	<div  class="video-wrapper">
-    <img src="images/fondovid.png" alt=""  class="full-image-height">
+	<div  class="video-wrapper banner_c">
+    <img src="images/fondovid.png" alt="" width="100%" class="full-image-height">
    <a href="" data-toggle="modal"  id="modalScroll" data-target="#exampleModal" >
   <img  src="images/play.png" alt="" id="myVideo"  class="vpb">
   </a>
@@ -112,18 +112,35 @@
     <div class="col-md-6 a3 animated">
       <figure class="d-flex align-items-center">
         <img src="images/nosotros-1.jpg" alt="" class="w-100">
-        <button class="figure__"><img src="images/chevron-w-r.svg" alt=""></button>
+        <button class="figure__"><div><span>VER&nbsp;MAS</span></div> <img src="images/chevron-w-r.svg" alt=""></button>
       </figure>
       <div class="caption_n link_rose"><span>Gira Pre Venta Campaña 1 - Puerto Ordaz, 2019</span></div>
     </div>
 		<div class="col-md-6 px-5 a4 animated">
 			<h1 class="link_rose m-0 p-0"><strong>Tendencias</strong></h1>
 			<h5 class="m-0 p-0">Sobre nosotros</h5>
-			<p class="m-0 p-0 text-justify">Nacimos en el 2007 con el objetivo de empoderar a la mujer
-	Venezolana para que tenga su propio negocio a través del
-	sistema de venta directa por colecciones, por medio del cual
-	se comercializa todo tipo de prendas de vestir para dama y
-	caballero, colecciones de belleza y lencería para el hogar.</p>
+      <div class="container_text_n">
+        <div class="text_n">
+
+            <p class="m-0 p-0 text-justify active">Nacimos en el 2007 con el objetivo de empoderar a la mujer
+                Venezolana para que tenga su propio negocio a través del
+                sistema de venta directa por colecciones, por medio del cual
+                se comercializa todo tipo de prendas de vestir para dama y
+                caballero, colecciones de belleza y lencería para el hogar.</p>
+
+                <p class="m-0 p-0 text-justify">Nacimos en el 2007 con el objetivo de empoderar a la mujer
+                    Venezolana para que tenga su propio negocio a través del
+                    sistema de venta directa por colecciones, por medio del cual
+                    se comercializa todo tipo de prendas de vestir para dama y
+                    caballero, colecciones de belleza y lencería para el hogar.</p>
+
+                    <p class="m-0 p-0 text-justify">Nacimos en el 2007 con el objetivo de empoderar a la mujer
+                        Venezolana para que tenga su propio negocio a través del
+                        sistema de venta directa por colecciones, por medio del cual
+                        se comercializa todo tipo de prendas de vestir para dama y
+                        caballero, colecciones de belleza y lencería para el hogar.</p> 
+        </div>
+      </div>
 		</div>
 	</div>
 </div>
@@ -425,7 +442,7 @@ externo sea plena.</p>
                 items: 1,
                 loop: true,
                 dots:false,
-                nav:false,
+                nav:true,
                 autoplay:true,
                 autoplayTimeout:15000,
                 autoplayHoverPause:false
@@ -446,6 +463,12 @@ externo sea plena.</p>
                   }
 
               })
+              $('#nav_owl_next').click(function () {
+				owl.trigger('next.owl.carousel');
+			});
+			$('#nav_owl_prev').click(function () {
+				owl.trigger('prev.owl.carousel');
+			});
             })
     </script> 
 <script>

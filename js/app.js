@@ -17,16 +17,25 @@ $(document).ready(function() {
         }
     })
 
+    $('.Search_td img').on('click', function() {
+        $('.Search_td').toggleClass('SearchAnima');
+    })
+
     // button categorias plus
     var cate_p = true;
     $('.categorias_title').on('click', function() {
         if (cate_p == true) {
+            $('.categorias_c').addClass('animCateg_C');
             $('.categorias_title img').css('transform', 'rotate(0deg)');
+            $('.categorias_title span').css('display', 'block');
             $('.accordion').hide('fast');
+            $('.categorias_title span').fadeOut('fast');
             cate_p = false;
         } else {
+            $('.categorias_c').removeClass('animCateg_C');
             $('.categorias_title img').css('transform', 'rotate(45deg)');
             $('.accordion').show('fast');
+            $('.categorias_title span').fadeIn('fast');
             cate_p = true;
         }
     })
@@ -154,78 +163,6 @@ $(document).ready(function() {
 
 
     })
-
-    // carousel 
-
-    var rot = {
-        btnRotateNext: $('#btnVisualNext'),
-        btnRotateBack: $('#btnVisualBack'),
-        tarjeta: $('div#visualizador__img div.tarjeta'),
-        rotar: false,
-        rotarStart: function() {
-            rot.rotarNext();
-            rot.rotarBack();
-        },
-        rotarNext: function() {
-            rot.btnRotateNext.click(function(e) {
-                e.preventDefault();
-                if (rot.rotar === false) {
-                    rot.tarjeta.addClass('img__rotada');
-                    rot.rotar = true;
-                } else {
-                    rot.tarjeta.removeClass('img__rotada');
-                    rot.rotar = false;
-                }
-
-            })
-        }, // end totate next
-        rotarBack: function() {
-                rot.btnRotateBack.click(function(e) {
-                    e.preventDefault();
-                    if (rot.rotar === false) {
-                        rot.tarjeta.addClass('img__rotada');
-                        rot.rotar = true;
-                    } else {
-                        rot.tarjeta.removeClass('img__rotada');
-                        rot.rotar = false;
-                    }
-
-                })
-            } // end rotar back
-
-
-    }
-
-    rot.rotarStart();
-
-    var mod = {
-        item: $('.item_p'),
-        visualizador: $('#visualizador__img'),
-        contenedorV: $('div.mod__visual'),
-        btncloseVisualizador: $('#close__visualizador'),
-        modalStart: function() {
-            mod.openVisualizador();
-            mod.closeVisualizador();
-        },
-        openVisualizador: function() {
-            if ($(document).innerWidth() <= 768) {
-                mod.item.click(function() {
-                    mod.visualizador.css('position', 'fixed');
-                    mod.visualizador.addClass('openedVisual');
-                    mod.contenedorV.addClass('visualEnd');
-                    mod.btncloseVisualizador.css('display', 'block');
-                })
-            }
-        },
-        closeVisualizador: function() {
-            mod.btncloseVisualizador.click(function() {
-                mod.visualizador.removeClass('openedVisual');
-                mod.btncloseVisualizador.css('display', 'none');
-            })
-        }
-    }
-
-    mod.modalStart();
     /*
     var resize = {
         Start: function(){
@@ -328,16 +265,19 @@ $(document).ready(function() {
 
         }
     );
+
+
+
     $(document).ready(function() {
         $(".main").onepage_scroll({
             sectionContainer: "section",
             responsiveFallback: false,
             loop: true,
             beforeMove: function(index) {
+                console.log();
                 if (index == 1) {
                     var $this = $(this);
                     var $slidelem = $('.slidebttn');
-                    var $slideCategoria = $('.categorias_title');
 
                     $slidelem.stop().animate({
                         'width': '195px',
@@ -350,15 +290,23 @@ $(document).ready(function() {
                     }, 300);
                     $slidelem.find('span').stop(true, true).delay(800).fadeIn();
 
-                    // $slideCategoria.stop().animate({'width':'195px','margin-right':'0px','display':'initial',borderTopLeftRadius: 25,borderTopRightRadius: 0,borderBottomLeftRadius: 25,borderBottomRightRadius: 0 },300);
-                    // $slideCategoria.find('span').stop(true,true).delay( 800 ).fadeIn();
-
+                    //animacion del buscador
+                    $('.Search_td').removeClass('SearchAnima');
+                    //animacion contenedor de categorias
+                    $('.categorias_c').removeClass('animCateg_C');
+                    $('.categorias_title img').css('transform', 'rotate(45deg)');
+                    $('.accordion').show('fast');
+                    $('.categorias_title span').fadeIn('fast');
+                    cate_p = false;
+                    
+                    setTimeout(() => {
+                        $('.visual_Cont').removeClass('fixedV'); 
+                    }, 800);
                 }
+
                 if (index > 1) {
                     var $this = $(this);
                     var $slidelem = $('.slidebttn');
-                    var $slideCategoria = $('.categorias_title');
-
                     $slidelem.css("display", "initial");
                     $slidelem.stop().animate({
                         'width': '55px',
@@ -368,12 +316,28 @@ $(document).ready(function() {
 
                     $slidelem.find('span').stop(true, true).fadeOut();
 
-                    // $slideCategoria.css("display","initial");
-                    // $slideCategoria.stop().animate({'width':'55px','border-radius':'50%','margin-right':'10px'},400);
-
-                    // $slideCategoria.find('span').stop(true,true).fadeOut();
+                    //animacion del buscador
+                    $('.Search_td').addClass('SearchAnima');
+                    //animacion contenedor de categorias
+                    $('.categorias_c').addClass('animCateg_C');
+                    $('.categorias_title img').css('transform', 'rotate(0deg)');
+                    $('.accordion').hide('fast');
+                    $('.categorias_title span').fadeOut('fast');
+                    cate_p = false;
+                    // fijar visualizador
+                    setTimeout(() => {
+                        $('.visual_Cont').addClass('fixedV'); 
+                    }, 800);
 
                 }
+
+                // if (pagin == 'contacto' && index == 2) {
+                //     $(".main").addClass("fixFooter");
+                // } else {
+                //     $(".main").removeClass("fixFooter");
+                // }
+
+
 
                 switch (pagin) {
                     case 'index':
@@ -450,5 +414,54 @@ $(document).ready(function() {
         }
     }
 
+    var pvi = {
+        btnimg: $('.select_items_collec .item a'),
+        visorIMG: $('.visualizador'),
+
+    }
+
+    var mvi = {
+        initVisualiz: function() {
+            pvi.btnimg.on('click', mvi.mostrarIMG);
+        },
+        mostrarIMG: function(e) {
+            e.preventDefault();
+            pvi.visorIMG.attr('src', pvi.btnimg.attr('href'))
+            console.log(pvi.btnimg.attr('href'));
+        }
+    }
+
+    mvi.initVisualiz();
+
+    var slp = {
+        btnMore: $('.figure__'),
+        textN: $('.text_n'),
+        p: $('.text_n p'),
+        count: 1,
+    }
+
+    var slm = {
+        initChange: function() {
+            slp.btnMore.on('click', slm.moveCont);
+            console.log(slp.p.length)
+        },
+        moveCont: function() {
+            if(slp.count < slp.p.length)
+            slp.textN.css('margin-top', '-'+slp.count*15+'%');
+            slp.count++;
+            slp.p[slp.count].style.opacity = 1;
+            console.log(slp.p[slp.count]);
+        }
+    }
+
+    slm.initChange();
+
+
+    // for (var i = 1; i < paginasTotal; i++) {
+    //     $('.features').html("<div class='feature'><img src='pages/"+i+".png' class='w-100'></div>");
+    //     console.log("<div class='feature'><img src='pages/"+i+".png' class='w-100'></div>")
+    //     return;
+    // }
+    // $('.features').load('.features')
 
 });

@@ -3,10 +3,10 @@
 	font-family: 'Salmela';
 	src: url(../fonts/Salmela.otf);
 }
-@font-face{
+/* @font-face{
   font-family: 'Montserrat';
   src: url(../fonts/Montserrat-Regular.ttf);
-}
+} */
 .letters-section-h4{
   font-size: 1.2rem;
 }
@@ -222,6 +222,22 @@ SLIDESHOW
   height: 95vh;
 }
 
+.container_text_n {
+  overflow: hidden;
+}
+
+.text_n {
+  transition: all ease-in-out .4s;
+}
+
+.text_n p {
+  opacity: 0;
+}
+
+.text_n p.active {
+  opacity: 1;
+}
+
 /*video*/
 
 .slide_video .owl-video-tn {
@@ -408,7 +424,8 @@ footer .red-social-footer a:hover {
 }
 
 .fuerza__venta .fuerza__child {
-    width: 50%;
+    width: 45%;
+    margin-right: 10%;
 }
 
 .item .item__division:nth-child(1) {
@@ -534,42 +551,149 @@ footer .red-social-footer a:hover {
 }
 
 /*colecciones*/
-.categorias_c {
+.banner_c {
+  width: 100%;
+  height: 86vh;
+  overflow: hidden;
+  visibility: visible;
+}
+.banner_c img {
+  transform: translateY(-10%);
+}
+
+.Search_td {
   position: fixed;
-  z-index: 99;
   right: 0;
-  top: 14%;
+  top: 13%;
+  width: 195px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,.35);
+  z-index: 4;
+  padding: 8px 17px;
+  border-radius: 25px 0px 0px 25px;
+  cursor: pointer;
+  transition: all ease-in-out .5s;
+}
+
+.SearchAnima {
+  animation: animSearch .7s;
+  border-radius: 25px 25px 25px 25px;
+  width: 55px;
+  margin-right: 10px;
+  
+}
+
+@keyframes animSearch {
+  from {
+    border-radius: 25px 0px 0px 25px;
+    width: 195px;
+  }
+  to {
+    border-radius: 25px 25px 25px 25px;
+    width: 55px;
+    margin-right: 10px;
+  }
+}
+.Search_td input {
+  width: 100%;
+  border: none;
+  background: white;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+.Search_td input:focus {
+  outline: none;
+}
+.Search_td input::placeholder {
+  color: rgb(149,149,149);
+}
+.categorias_c {
+  width: 195px;
+  position: fixed;
+  z-index: 4;
+  right: 0;
+  top: 21%;
   background: #fff;
   box-shadow: 0 0 10px rgba(0,0,0,.35);
   padding: 10px 0px;
-  border-radius: 50px 0px 0px 50px;
+  border-radius: 25px 0px 0px 0px;
 }
+
 .categorias_c .categorias_title {
+  display: flex;
   color: rgb(217,4,102);
   font-weight: bold;
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
-  letter-spacing: 2px;
   padding: 0 20px;
   cursor: pointer;
+  justify-content: flex-end;
+  border-radius: 25px 25px 25px 25px;
   transition: all ease-in-out .3s;
 }
+.categorias_c .categorias_title span {
+  transition: all ease-in-out .5s;
+}
+.animCateg_C {
+  animation: animatCategorias .7s;
+  width: 60px;
+  border-radius: 25px 25px 25px 25px;
+  margin-right: 10px
+}
+
+@keyframes animatCategorias {
+  from {
+    border-radius: 25px 0px 0px 0px;
+  }
+  to {
+    width: 55px;
+    border-radius: 25px 25px 25px 25px;
+    margin-right: 10px;
+  }
+}
+
+.visual_Cont {
+  display: none;
+  /* visibility: hidden; */
+  transition: all ease-in-out .8s;
+}
+
+.fixedV {
+position: fixed;
+z-index: 1;
+top: 0;
+left: 0;
+display: block;
+/* visibility: visible; */
+}
+
 .categorias_title img {
   width: 20px;
   transform: rotate(45deg);
   transition: all ease-in-out .3s;
 }
-
-.categorias_c .categorias_title:hover {
-  width: 135px;
-}
 .card-header {
   background-color: rgb(241,241,241);
   border: none;
+  border-bottom: 1px solid #e9e9e9;
   padding: 0;
   font-family: 'Montserrat', sans-serif;
 }
 
+.card-header h2 button {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.card-header h2 button i {
+  color: #dddbdb;
+}
 .accordion .card:first-of-type, .accordion .card:last-of-type {
   border: none;
 }
@@ -624,9 +748,11 @@ footer .red-social-footer a:hover {
 .slect_c {
   text-align: center;
   width: 90%;
+  height: 17vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  overflow: hidden;
 }
 .slect_c button {
   background: none;
@@ -856,15 +982,16 @@ text-align: center;
 }
 
 #form_contact input, #form_contact textarea {
-  font-size: 20pt;
+  font-size: 16pt;
   color: rgb(149,149,149);
   background: rgb(241,241,241);
   border: none;
   width: 100%;
   margin-top: 20px;
-  padding: 20px 10px;
+  padding: 15px 10px;
   text-align: center;
   font-weight: 800;
+  border-radius: 5px;
 }
 
 #form_contact input:placeholder, #form_contact textarea:placeholder {
@@ -876,6 +1003,21 @@ text-align: center;
   outline: none;
 
 }
+#form_contact button {
+  font-weight: 600;
+  color: #fff;
+  background: rgb(217,4,102);
+  padding: 15px 25px;
+  font-size: 1rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Montserrat', sans-serif;
+  transform: translateY(-20px);
+  cursor: pointer;
+}
+
 .container_n {
   width: 100%;
   height: 100vh;
@@ -910,22 +1052,97 @@ text-align: center;
 .figure__ {
   position: absolute;
   z-index: 99;
-  left: 90%;
+  left: 82%;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 80px;
+  /* width: 80px; */
   height: 60px;
   background: rgb(217,4,102);
   text-align: center;
   border: none;
   cursor: pointer;
+  overflow: hidden;
+  padding: 0 20px;
+  z-index: 5;
+}
+
+.figure__ div {
+  transition: all ease-in-out .4s;
+  width: 0%;
+}
+
+.figure__ div span {
+  opacity: 0;
+  color: #fff;
+  font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
+  transition: all ease .4s;
 }
 .figure__:focus {
   outline: none;
 }
 .figure__ img {
   height: 35px;
+}
+
+.figure__:hover div {
+  width: 130%;
+}
+
+.figure__:hover div span {
+  opacity: 1;
+  letter-spacing: 4px;
+  padding: 0 7px;
+}
+
+.revistaBar {
+  transform: translateY(20px);
+  width: 60%;
+  margin: auto;
+  background: #fff;
+  box-shadow: 0 0 8px rgba(0,0,0,.35);
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7px 0;
+}
+.revistaBar button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.revistaBar button:focus {
+  outline: none;
+}
+.revistaBar button span {
+  color: #555;
+  font-family: 'Montserrat', sans-serif;
+  padding-right: 20px;
+  font-weight: 500;
+}
+.revistaBar button img {
+  width: 30px;
+  margin-right: 10px;
+}
+
+.revista_pag button img {
+  width: 15px;
+}
+
+.revista_pag {
+  display: flex;
+  /*justify-content: center;*/
+  align-items: center;
+}
+
+.revista_pag p {
+  color: #555;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
 }
 
 /* ============================ */
