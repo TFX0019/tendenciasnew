@@ -191,7 +191,7 @@
 						<a class="nav-link text-uppercase small active fw-700" href="index.html">inicio</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link text-uppercase small active fw-700" href="index.html">familia</a>
+						<a class="nav-link text-uppercase small active fw-700" href="familia.html">familia</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link text-uppercase small fw-700" href="coleccion.html">colecciones</a>
@@ -291,19 +291,6 @@
 								</a>
 							</div>
 						</div>
-						<!-- status elements -->
-						<div class="scroller-status">
-							<div class="infinite-scroll-request loader-ellips">
-								...
-							</div>
-							<p class="infinite-scroll-last">End of content</p>
-							<p class="infinite-scroll-error">No more pages to load</p>
-						</div>
-
-						<!-- pagination has path -->
-						<p class="pagination">
-							<a class="pagination__next" href="page2.html">Next page</a>
-						</p>
 
 					</div>
 				</div>
@@ -360,86 +347,11 @@
 									</a>
 								</div>
 							</div>
-							<!-- status elements -->
-							<div class="scroller-status">
-								<div class="infinite-scroll-request loader-ellips">
-									...
-								</div>
-								<p class="infinite-scroll-last">End of content</p>
-								<p class="infinite-scroll-error">No more pages to load</p>
-							</div>
-	
-							<!-- pagination has path -->
-							<p class="pagination">
-								<a class="pagination__next" href="page2.html">Next page</a>
-							</p>
-	
 						</div>
 					</div>
 				</div>
 			</section>
 
-
-
-		<section>
-			<!-- footer -->
-			<footer class="pt-5 d-none d-sm-none d-md-none d-lg-block d-xl-block" style="height: auto;">
-				<div class="row">
-					<div class="col-sm-2">
-						<img src="images/libelula-i.svg" class="libIMG w-100" alt="">
-					</div>
-					<div class="col-sm-8">
-						<div class="container ">
-							<div class="row">
-								<div class="col-md-4 ">
-									<img src="images/logo.png" alt="" class="w-60">
-									<p class=" mt-3">
-										<a href="" class=""><img src="images/facebook.png" width="20" height="20"
-												alt=""></a>
-										<a href="" class="ml-2"><img src="images/twitter.png" width="20" height="20"
-												alt=""></a>
-										<a href="" class="ml-2"><img src="images/instagram.png" width="20" height="20"
-												alt=""></a>
-										<a href="" class="ml-2"><img src="images/youtube.png" width="20" height="20"
-												alt=""></a>
-									</p>
-								</div>
-								<div class="col-md-4">
-									<h6 class="text-muted"><strong>Contacto</strong></h6>
-									<a href="" class="text-muted text_d_none txt_f"><img src="images/ubicacion.png"
-											alt="" width="20" height="20"> Google Maps</a> <br>
-									<span class="text-muted  ml-4 txt_f">Av La mata - Venezuela</span> <br>
-									<a href="" class="text-muted text_d_none txt_f"><img src="images/mail.png" alt=""
-											width="20" height="20"> tendenciasab@gmail.com</a>
-								</div>
-								<div class="col-md-4">
-									<h6 class="text-muted"><strong>Mi cuenta</strong></h6>
-									<a href="" class="text-uppercase link_rose text_color"><img
-											src="images/portafolio.png" alt="" width="20" height="20"> Oficina
-										virtual</a>
-								</div>
-							</div> <!-- end row -->
-							<hr class="bg-pink-hr">
-							<div class="row pb-4">
-								<div class="col-md-8">
-									<p class="p-0 m-0 text-muted txt_f">&copy; 2018 <a href=""
-											class="link_rose text_color">Tendencias</a>, Todos los derechos reservados
-									</p>
-								</div>
-								<div class="col-md-4">
-									<p class="p-0 m-0 text-right txt_f"><a href=""
-											class="text-muted text_d_none ">POLITICA DE COOKIES</a></p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-sm-2 text-right">
-						<img src="images/libelula-d.svg" class="libIMG w-100" alt="">
-					</div>
-				</div>
-			</footer>
-			<!-- end footer -->
-		</section>
 	</div>
 
 
@@ -447,7 +359,6 @@
 	<!-- scripts -->
 	<script src="js/jquery.js"></script>
 	<script src="js/bootstrap.min.js"></script>
-	<script src="js/infinite-scroll.pkgd.min.js"></script>
 	<script src="js/wow.min.js"></script>
 	<script src="js/owl.carousel.js"></script>
 	<script src="js/jquery.onepage-scroll.js"></script>
@@ -459,7 +370,7 @@
 			owl.owlCarousel({
 				margin: 5,
 				items: 4,
-				loop: true,
+				loop: false,
 				dots: false,
 				nav: false,
 				autoplay: true,
@@ -472,17 +383,6 @@
 			});
 			$('#prev').click(function () {
 				owl.trigger('prev.owl.carousel');
-			});
-		})
-	</script>
-	<script>
-		$(document).ready(function () {
-			// init Infinite Scroll
-			$('.article-feed').infiniteScroll({
-				path: '.pagination__next',
-				append: '.article',
-				status: '.scroller-status',
-				hideNav: '.pagination',
 			});
 		})
 	</script>

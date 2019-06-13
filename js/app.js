@@ -272,8 +272,9 @@ $(document).ready(function() {
         $(".main").onepage_scroll({
             sectionContainer: "section",
             responsiveFallback: false,
-            loop: true,
+            loop: false,
             beforeMove: function(index) {
+
                 console.log();
                 if (index == 1) {
                     var $this = $(this);
@@ -345,6 +346,34 @@ $(document).ready(function() {
                             $(".main").addClass("fixFooter");
                         } else {
                             $(".main").removeClass("fixFooter");
+                        }
+                        break
+                    case 'nosotros':
+                        if (index == 6) {
+                            $(".main").addClass("fixFooter");
+                        } else {
+                            $(".main").removeClass("fixFooter");
+                        }
+                        break
+                    case 'familia':
+                        if (index == 4) {
+                            $(".main").addClass("fixFooter4");
+                        } else {
+                            $(".main").removeClass("fixFooter4");
+                        }
+                        break
+                    case 'contacto':
+                        if (index == 2) {
+                            $(".main").addClass("fixFooter2");
+                        } else {
+                            $(".main").removeClass("fixFooter2");
+                        }
+                        break
+                    case 'premios':
+                        if (index == 4) {
+                            $(".main").addClass("fixFooter4");
+                        } else {
+                            $(".main").removeClass("fixFooter4");
                         }
                         break
                 }
@@ -432,36 +461,5 @@ $(document).ready(function() {
     }
 
     mvi.initVisualiz();
-
-    var slp = {
-        btnMore: $('.figure__'),
-        textN: $('.text_n'),
-        p: $('.text_n p'),
-        count: 1,
-    }
-
-    var slm = {
-        initChange: function() {
-            slp.btnMore.on('click', slm.moveCont);
-            console.log(slp.p.length)
-        },
-        moveCont: function() {
-            if(slp.count < slp.p.length)
-            slp.textN.css('margin-top', '-'+slp.count*15+'%');
-            slp.count++;
-            slp.p[slp.count].style.opacity = 1;
-            console.log(slp.p[slp.count]);
-        }
-    }
-
-    slm.initChange();
-
-
-    // for (var i = 1; i < paginasTotal; i++) {
-    //     $('.features').html("<div class='feature'><img src='pages/"+i+".png' class='w-100'></div>");
-    //     console.log("<div class='feature'><img src='pages/"+i+".png' class='w-100'></div>")
-    //     return;
-    // }
-    // $('.features').load('.features')
 
 });

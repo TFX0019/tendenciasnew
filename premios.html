@@ -3,23 +3,25 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-		<!-- styles -->
-		<link rel="stylesheet" href="css/bootstrap.css">
-		<link rel="stylesheet" href="css/animate.css">
-		<link rel="stylesheet" href="css/font-awesome.css">
-		<link rel="stylesheet" href="css/onepage-scroll.css">
-		<link rel="stylesheet" href="css/bulls.css">
-		<link rel="stylesheet" href="css/custom.css">
-		<link rel="stylesheet" href="css/medias.css">
+    <!-- styles -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/onepage-scroll.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.default.css">
+    <link rel="stylesheet" href="css/bulls.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/medias.css">
 		<!-- revista -->
 		<link rel="stylesheet" href="lib/style.css">
 		<link rel="stylesheet" href="lib/wow_book.css">
 		<link rel="stylesheet" href="lib/preview.css">
 		<script>
-			var pagin = 'contacto';
+			var pagin = 'premios';
 		</script>
-		<!-- fuentes font-family: 'Montserrat', sans-serif; -->
-		<link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900&display=swap"
+    rel="stylesheet">
 	<title>Tendencias | PREMIOS</title>
 </head>
 <body>
@@ -113,6 +115,7 @@
     	<div class="revistaBar">
 			<button><img src="images/ICONO-DESCARGAR.png" alt=""><span>Descarga</span></button>
 			<button id='zoomin' title='zoom in'><img src="images/ICONO-AMPLIAR-PAGINA.png" alt=""><span>Ampliar página</span></button>
+      <button id='zoomout' title='zoom out'><img src="images/ICONO-AMPLIAR-PAGINA.png" alt=""><span>Reducir página</span></button>
 			<button id="thumbs" title="Miniaturas"><img src="images/ICONO-PAGINAS.png" alt=""><span>Páginas</span></button>
 			<button id='fullscreen' title='fullscreen on/off'><img src="images/ICONO-CATALOGO.png" alt=""><span>Pantalla completa</span></button>
 			<div class="revista_pag">
@@ -256,7 +259,7 @@
     $(document).ready(function() {
         $('#features').wowBook({
         	height : 500, 
-        	width  : 600, 
+        	width  : 800, 
         	pageNumbers: 0,
         	centeredWhenClosed : true,
         	hardcovers : true,
@@ -267,6 +270,7 @@
         	}, 
         	controls : {
         	zoomIn    : '#zoomin',
+          zoomOut    : '#zoomout',
             next      : '#next',
             back      : '#back',
             first     : '#first',
@@ -275,10 +279,23 @@
             flipSound : '#flipsound',
             thumbnails : '#thumbs',
             fullscreen : '#fullscreen'
-        }}).css({'display':'none', 'margin':'auto', 'margin-top': '5%'}).fadeIn(1000);
+        }}).css({'display':'none', 'margin':'auto', 'margin-top': '2%','margin-bottom': '10px'}).fadeIn(1000);
         var book = $.wowBook("#features");
-        $('#p_total').text(book.pages.length)
-        $('#p_view').text(book.currentPage)
+        $('#p_total').text(book.pages.length);
+        $('#p_view').text(book.currentPage);
+        var clp = 1;
+        $('#zoomin').on('click', function() {
+          if(clp >= 1) {
+            clp++;
+            $('#features').css('margin-bottom', 17*clp+'px');
+          }
+        })
+        $('#zoomout').on('click', function() {
+          if (clp > 1) {
+            clp--;
+            $('#features').css('margin-bottom', 17*clp+'px');
+          }
+        })
     });
 </script>
 

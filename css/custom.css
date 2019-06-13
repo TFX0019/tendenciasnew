@@ -221,23 +221,6 @@ SLIDESHOW
 	background-attachment: scroll;
   height: 95vh;
 }
-
-.container_text_n {
-  overflow: hidden;
-}
-
-.text_n {
-  transition: all ease-in-out .4s;
-}
-
-.text_n p {
-  opacity: 0;
-}
-
-.text_n p.active {
-  opacity: 1;
-}
-
 /*video*/
 
 .slide_video .owl-video-tn {
@@ -964,6 +947,17 @@ text-align: center;
     transform: translate3d(0px, -440%, 0px) !important;
     transition: all 1000ms ease 0s;
 }
+
+.fixFooter4{
+    transform: translate3d(0px, -240%, 0px) !important;
+    transition: all 1000ms ease 0s;
+}
+
+.fixFooter2{
+    transform: translate3d(0px, -40%, 0px) !important;
+    transition: all 1000ms ease 0s;
+}
+
 .fixEffect{
     visibility: initial !important;
 }
@@ -1051,8 +1045,10 @@ text-align: center;
 
 .figure__ {
   position: absolute;
-  z-index: 99;
-  left: 82%;
+  z-index: 4;
+  left: 42%;
+  top: 50%;
+  bottom: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1097,7 +1093,6 @@ text-align: center;
 }
 
 .revistaBar {
-  transform: translateY(20px);
   width: 60%;
   margin: auto;
   background: #fff;
@@ -1107,6 +1102,7 @@ text-align: center;
   justify-content: center;
   align-items: center;
   padding: 7px 0;
+  z-index: 4;
 }
 .revistaBar button {
   background: none;
@@ -1119,18 +1115,20 @@ text-align: center;
   outline: none;
 }
 .revistaBar button span {
+  font-size: small;
   color: #555;
   font-family: 'Montserrat', sans-serif;
   padding-right: 20px;
   font-weight: 500;
 }
 .revistaBar button img {
-  width: 30px;
+  width: 20px;
   margin-right: 10px;
 }
 
 .revista_pag button img {
-  width: 15px;
+  width: 10px;
+  margin-right: 0;
 }
 
 .revista_pag {
