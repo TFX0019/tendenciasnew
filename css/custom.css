@@ -1067,7 +1067,7 @@ text-align: center;
 .figure__ {
   position: absolute;
   z-index: 4;
-  left: 42%;
+  left: 40%;
   top: 50%;
   bottom: 50%;
   display: flex;
