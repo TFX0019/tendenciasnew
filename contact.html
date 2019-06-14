@@ -17,12 +17,21 @@
 		<!-- fuentes font-family: 'Montserrat', sans-serif; -->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900&display=swap"
 		rel="stylesheet">
-	<title>Tendencias | NOSOTROS</title>
+	<title>Tendencias | CONTACTO</title>
 </head>
 <body>
 	  <div class=" col-md-6 folder-tv text-right">        
     <a class="button_bLeft slidebttn folde-ico text-uppercase" id="button_bLeft"><span class="fs-smaller fw-600">oficina virtual</span> <img class="portafolio" src='images/portafolio.png' /></a>
   </div>
+  
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+        <video src="videos/1.mp4" controls style="width: 100%;"></video>
+    </div>
+  </div>
+</div>
+
 	<div class="main">
 					<section> <!-- menu & slider -->
 			<div class="menu">
@@ -37,22 +46,22 @@
 				</div><!-- end logo -->
 				<ul class="nav justify-content-center ">
 					<li class="nav-item">
-						<a class="nav-link text-uppercase small active fw-700" href="index.html">inicio</a>
+						<a class="nav-link text-uppercase small active fw-600" href="index.html">inicio</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link text-uppercase small active fw-700" href="index.html">familia</a>
+						<a class="nav-link text-uppercase small fw-600" href="familia.html">familia</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link text-uppercase small fw-700" href="coleccion.html">colecciones</a>
+						<a class="nav-link text-uppercase small fw-600" href="coleccion.html">colecciones</a>
 					</li>
 										<li class="nav-item">
-						<a class="nav-link text-uppercase small active fw-700" href="premios.html">premios</a>
+						<a class="nav-link text-uppercase small active fw-600" href="premios.html">premios</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link text-uppercase small fw-700" href="nosotros.html">nosotros</a>
+						<a class="nav-link text-uppercase small fw-600" href="nosotros.html">nosotros</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link text-uppercase small fw-700" href="contact.html">contáctanos</a>
+						<a class="nav-link text-uppercase small active fw-600" href="contact.html">contáctanos</a>
 					</li>
 				</ul>
 			</div>
@@ -89,22 +98,25 @@
 <div class="w-100 mt-3">
         <div class="row justify-content-center">
         <div class="col-md-4 text-center">
-          <h3 class="fw-800 text_color montserrat text-uppercase">contáctanos</h3>
+          <h3 class="fw-800 text_color montserrat text-uppercase text_curvo">contáctanos</h3>
           <form action="" id="form_contact">
-            <input type="text" placeholder="Nombre">
-            <input type="email" placeholder="Correo electronico">
-            <textarea name="" id="" placeholder="Mensaje"></textarea>
-            <button type="submit">enviar</button>
+            <input class="montserrat" type="text" placeholder="Nombre">
+            <input class="montserrat" type="email" placeholder="Correo electronico">
+            <textarea class="montserrat" name="" id="" placeholder="Mensaje"></textarea>
+            <button class="montserrat" type="submit">enviar</button>
           </form>
         </div>
                   <div class="col-md-12 text-center montserrat">
             <p class="p-0 m-0 small" style="letter-spacing: 3px;">Avenida 5 con calle 5, N° 371, Sector La Mata, Cabudare - Estado Lara</p>
             <p class="p-0 m-0" style="letter-spacing: 1px;"><a href="mailto:info@tendenciasab.com" class="text_d_none" style="color: #212121; font-weight: bold;">info@tendenciasab.com</a> +58 251 435 8811 / 88</p>
             <p class="p-0 m-0 text_color" style="letter-spacing: 5px;">COMERCIALIZADORA E IMPORTADORA AB DE VENEZUELA C.A.</p>
-                        <a href="" class="text_d_none fw-800 link_rose montserrat"><img src="images/ICONO-UBICACIÓN.png" width="40" height="50" alt=""> <br> <span>ver ubicación</span></a>
-            <img src="images/bg-contact.png" width="100%" alt="">
+                        <a href="" class="text_d_none fw-600 text-uppercase link_rose montserrat"><img src="images/ICONO-UBICACIÓN.png" width="40" height="50" alt=""> <br> <span>ver ubicación</span></a>
           </div>
       </div>
+</div>
+
+<div class="video_contact">
+	<video src="videos/1.mp4" autoplay loop poster="images/bg-contact.png"></video>
 </div>
 			</section> <!-- video & slider -->
 
@@ -131,7 +143,7 @@
         <h6 class="text-muted"><strong>Contacto</strong></h6>
         <a href="" class="text-muted text_d_none txt_f"><img src="images/ubicacion.png" alt="" width="20" height="20"> Google Maps</a> <br>
         <span class="text-muted  ml-4 txt_f">Av La mata - Venezuela</span> <br>
-        <a href="" class="text-muted text_d_none txt_f"><img src="images/mail.png" alt="" width="20" height="20"> tendenciasab@gmail.com</a>
+        <a href="" class="text-muted text_d_none txt_f"><img src="images/mail.png" alt="" width="20" height="20"> info@tendenciasab.com</a>
       </div>
       <div class="col-md-4">
         <h6 class="text-muted"><strong>Mi cuenta</strong></h6>
@@ -141,7 +153,7 @@
       <hr class="bg-pink-hr">
       <div class="row pb-4">
         <div class="col-md-8">
-          <p class="p-0 m-0 text-muted txt_f">&copy; 2018 <a href="" class="link_rose text_color">Tendencias</a>, Todos los derechos reservados</p>
+          <p class="p-0 m-0 text-muted txt_f">&copy; 2019 <a href="" class="link_rose text_color">Tendencias</a>, Todos los derechos reservados</p>
         </div>
         <div class="col-md-4">
           <p class="p-0 m-0 text-right txt_f"><a href="" class="text-muted text_d_none ">POLITICA DE COOKIES</a></p>
@@ -162,10 +174,14 @@
 
 <!-- scripts -->
 <script src="js/jquery.js"></script>
+<script src="js/jquery.arctext.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/wow.min.js"></script>
 <script src="js/jquery.onepage-scroll.js"></script>
 <script src="js/bulls.js"></script>
 <script src="js/app.js"></script>
+<script>
+	$('.text_curvo').arctext({radius: 700})
+</script>
 </body>
 </html>

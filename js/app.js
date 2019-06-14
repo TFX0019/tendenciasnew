@@ -300,9 +300,7 @@ $(document).ready(function() {
                     $('.categorias_title span').fadeIn('fast');
                     cate_p = false;
                     
-                    setTimeout(() => {
                         $('.visual_Cont').removeClass('fixedV'); 
-                    }, 800);
                 }
 
                 if (index > 1) {

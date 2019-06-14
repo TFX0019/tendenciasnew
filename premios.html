@@ -42,22 +42,22 @@
 				</div><!-- end logo -->
 				<ul class="nav justify-content-center ">
 					<li class="nav-item">
-						<a class="nav-link text-uppercase small active fw-700" href="index.html">inicio</a>
+						<a class="nav-link text-uppercase small fw-600 montserrat" href="index.html">inicio</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link text-uppercase small active fw-700" href="index.html">familia</a>
+						<a class="nav-link text-uppercase small fw-600 montserrat" href="familia.html">familia</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link text-uppercase small fw-700" href="coleccion.html">colecciones</a>
+						<a class="nav-link text-uppercase small fw-600 montserrat" href="coleccion.html">colecciones</a>
 					</li>
 										<li class="nav-item">
-						<a class="nav-link text-uppercase small active fw-700" href="premios.html">premios</a>
+						<a class="nav-link text-uppercase small active fw-600 montserrat" href="premios.html">premios</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link text-uppercase small fw-700" href="nosotros.html">nosotros</a>
+						<a class="nav-link text-uppercase small fw-600 montserrat" href="nosotros.html">nosotros</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link text-uppercase small fw-700" href="contact.html">contáctanos</a>
+						<a class="nav-link text-uppercase small fw-600 montserrat" href="contact.html">contáctanos</a>
 					</li>
 				</ul>
 			</div>
@@ -91,15 +91,16 @@
 				</div>
 			</div>
 
-	<div class="banner_c">
-		<img src="images/BANNER-WEB7.jpg" class="w-100 fadeIn"alt="">
-	</div>
+      <div class="banner_familia wow fadeIn" 
+      style="background: url(images/BANNER-WEB7.jpg);background-repeat: no-repeat;background-size: 100%;background-attachment: fixed;background-position: center -100px;">
+      </div>
+  
 			</section> <!-- video & slider -->
 
 
 			<section>
 
-<div style="padding-top: 25px">
+<div class="catalogo" style="padding-top: 25px">
 
     <style>.feature{ background-color: #fff; }</style>
 
@@ -139,8 +140,8 @@
       <a href="" class="face_yt">
         <img src="images/youtube-nosotros.svg" alt="">
         <div>
-        <p class="">Tendencias</p>
-        <p class="small">Visitanos</p>
+        <p class="montserrat">Tendencias</p>
+        <p class="small montserrat">Visitanos</p>
         </div>
       </a>
 
@@ -215,7 +216,7 @@
         <h6 class="text-muted"><strong>Contacto</strong></h6>
         <a href="" class="text-muted text_d_none txt_f"><img src="images/ubicacion.png" alt="" width="20" height="20"> Google Maps</a> <br>
         <span class="text-muted  ml-4 txt_f">Av La mata - Venezuela</span> <br>
-        <a href="" class="text-muted text_d_none txt_f"><img src="images/mail.png" alt="" width="20" height="20"> tendenciasab@gmail.com</a>
+        <a href="" class="text-muted text_d_none txt_f"><img src="images/mail.png" alt="" width="20" height="20"> info@tendenciasab.com</a>
       </div>
       <div class="col-md-4">
         <h6 class="text-muted"><strong>Mi cuenta</strong></h6>
@@ -225,7 +226,7 @@
       <hr class="bg-pink-hr">
       <div class="row pb-4">
         <div class="col-md-8">
-          <p class="p-0 m-0 text-muted txt_f">&copy; 2018 <a href="" class="link_rose text_color">Tendencias</a>, Todos los derechos reservados</p>
+          <p class="p-0 m-0 text-muted txt_f">&copy; 2019 <a href="" class="link_rose text_color">Tendencias</a>, Todos los derechos reservados</p>
         </div>
         <div class="col-md-4">
           <p class="p-0 m-0 text-right txt_f"><a href="" class="text-muted text_d_none ">POLITICA DE COOKIES</a></p>
@@ -246,14 +247,15 @@
 
 <!-- scripts -->
 <script>var paginasTotal = 25;</script>
-<script type="text/javascript" src="js/jquery.js"></script>
+<script src="js/jquery.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/wow.min.js"></script>
 <script src="js/jquery.onepage-scroll.js"></script>
 <script src="js/bulls.js"></script>
-<script src="js/app.js"></script>
-<!-- revista -->
-<!-- <script src="lib/modernizr-1.6.min.js"></script> -->
+<script src="js/app.js"></script><!-- revista -->
+<script>
+    new WOW().init();
+</script>
 <script src="lib/wow_book.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function() {
@@ -298,7 +300,9 @@
         })
     });
 </script>
-
+<script>
+$(".wow").addClass("fixEffect");
+</script>
 
 </body>
 </html>
