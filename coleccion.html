@@ -24,14 +24,14 @@
 </head>
 
 <body>
-				<div class="col-md-4 visual_Cont">
+				<div class="col-md-4 p-0 visual_Cont">
 						<div class="d-flex justify-content-between align-items-end" style="width: 90%; height: 80vh;">
-							<img class="visualizador" src="images/cart1 (2).jpg" width="90%" height="100%" alt="">
+							<img class="visualizador" src="images/cart1 (2).jpg" width="95%" height="100%" alt="">
 							<div class="share_v">
-								<a href="" title="Descargar"><img src="images/ICONO-DESCARGAR.png" class="w-100" alt=""></a>
-								<a title="Compartir en whatsapp" href="https://api.whatsapp.com/send?phone=584127737828&text=https://i.imgur.com/Z7CCiYI.jpg"><img src="images/instagram.png" class="w-100" alt=""></a>
-								<a href="" title="Compartir con facebook"><img src="images/facebook.png" class="w-100" alt=""></a>
-								<a href="" title="Compartir en twitter"><img src="images/twitter.png" class="w-100" alt=""></a>
+								<a href="" data-toggle="tooltip" data-placement="top" download="images/ICONO-DESCARGAR.png" title="Descargar"><img src="images/ICONO-DESCARGAR.png" class="w-100" alt=""></a>
+								<a data-toggle="tooltip" data-placement="top"  title="Compartir en whatsapp" href="https://api.whatsapp.com/send?phone=584127737828&text=https://i.imgur.com/Z7CCiYI.jpg"><img src="images/instagram.png" class="w-100" alt=""></a>
+								<a data-toggle="tooltip" data-placement="top"  href="http://facebook.com/sharer.php?u=facebook.com" title="Compartir con facebook" target="_blank"><img src="images/facebook.png" class="w-100" alt=""></a>
+								<a data-toggle="tooltip" data-placement="top"  href="http://twitter.com/home?status=twitter.com" target="_blank" title="Compartir en twitter"><img src="images/twitter.png" class="w-100" alt=""></a>
 							</div>
 						</div>
 						<div class="slect_c">
@@ -183,7 +183,7 @@
 					<!-- logo -->
 					<img src="images/logo.png" alt="" width="10%">
 				</div><!-- end logo -->
-				<ul class="nav justify-content-center ">
+				<ul class="nav justify-content-center">
 					<li class="nav-item">
 						<a class="nav-link text-uppercase small fw-600 montserrat" href="index.html">inicio</a>
 					</li>
@@ -355,6 +355,7 @@
 
 	<!-- scripts -->
 	<script src="js/jquery.js"></script>
+	<script src="js/popper.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/wow.min.js"></script>
 	<script src="js/owl.carousel.js"></script>
@@ -380,6 +381,10 @@
 			$('#prev').click(function () {
 				owl.trigger('prev.owl.carousel');
 			});
+			$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+
 		})
 	</script>
 </body>
