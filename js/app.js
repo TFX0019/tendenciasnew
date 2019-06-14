@@ -48,7 +48,9 @@ $(document).ready(function() {
         btnMision: $('#mision'),
         btnVision: $('#vision'),
         lineVision: $('#lineVision div'),
-        lineMision: $('#lineMision div')
+        lineMision: $('#lineMision div'),
+        zonaScroll: $('#zona_scroll_mv'),
+        condScroll: 1,
     }
 
     var nof = {
@@ -72,6 +74,15 @@ $(document).ready(function() {
                 no.lineVision.css('display', 'none');
                 no.lineMision.css('display', 'block');
 
+            })
+        },
+        changeVisionScroll: function() {
+            no.condScroll = 0;
+            no.zonaScroll.on('scroll', function() {
+                no.textMision.css('display', 'block');
+                no.textVision.css('display', 'none');
+                no.lineVision.css('display', 'none');
+                no.lineMision.css('display', 'block');     
             })
         }
 

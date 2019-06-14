@@ -99,12 +99,15 @@
 			</div>
 
 <!-- video -->
-	<div  class="video-wrapper banner_c">
+<div class="banner_c">
+    <div  class="video-wrapper">
     <img src="images/fondovid.png" alt="" width="100%" class="full-image-height">
    <a href="" data-toggle="modal"  id="modalScroll" data-target="#exampleModal" >
   <img  src="images/play.png" alt="" id="myVideo"  class="vpb">
   </a>
-</div><!-- end video -->
+</div>
+</div>
+<!-- end video -->
 			</section> <!-- video & slider -->
 
       <section> <!-- slide familia -->
@@ -193,9 +196,9 @@ cuenta siempre la opinión de nuestras lideres.</ montserrat text-mutedp>
 
 		<section>
 			<!-- mision & vision  -->
-<div class="w-100 mision__vision">
+<div class="w-100 mision__vision" style="height: 100vh; overflow: hidden;">
   <div class="d-flex align-items-center">
-    <div class="col-md-4 pr-0 ml-0">
+    <div class="col-md-4 pr-0 ml-0" id="zona_scroll_mv">
       <div class="row align-items-center" id="mision">
         <div class="col-md-6 pl-5 montserrat">
           <p class="m-0 p-0 link_rose">Nuestra</p>
@@ -222,7 +225,7 @@ cuenta siempre la opinión de nuestras lideres.</ montserrat text-mutedp>
     <div class="col-md-8 line_vertical">
       <div class="row align-items-center">
         <div class="col-md-10 pl-5">
-          <p class="montserrat px-5 text-muted text_mision"><a href="" class="link_rose ">Tendencias AB</a>, somos una empresa Venezolana joven y dinámicaen plena expansión, con mas de 13 años de trayectoria en el mercado Venezolano dedicada en la actualidad a la comercialización de todo tipo de productos de última moda de marcas reconocidas y altísima calidad para damas que están avaladas por nuestros departamentos de control de calidad. <br><br>
+          <p class="montserrat px-5 text-muted text_mision animated fadeIn"><a href="" class="link_rose ">Tendencias AB</a>, somos una empresa Venezolana joven y dinámicaen plena expansión, con mas de 13 años de trayectoria en el mercado Venezolano dedicada en la actualidad a la comercialización de todo tipo de productos de última moda de marcas reconocidas y altísima calidad para damas que están avaladas por nuestros departamentos de control de calidad. <br><br>
         Asi mismo, nos enorgullece tener más de 20 mil vendedoras que nos distribuyen en las mas importantes ciudades del país (San Cristóbal, Barinas, San Fernando de Apure, Barquisimeto, Guayana entre otras) por dicho motivo. se decidio seleccionar dada a su ubicación estratégica al estado Lara puntualmente zona de metropolitana de Barquisimeto - Cabudare estado Lara como punto de nuestra sede administrativa.</p>
         
         <p class="montserrat px-5 text-muted text_vision animated fadeIn">
@@ -237,62 +240,53 @@ cuenta siempre la opinión de nuestras lideres.</ montserrat text-mutedp>
 </div>
 		</section>
 
-		<section> <!-- slider nosotros -->
-			<!-- caro9usel -->
-<div class="w-100 d-flex justify-content-center align-items-center" style="height: 100vh;">
-  <div class="weSlide owl-carousel owl-theme" style="overflow: hidden;">
-
-    <div class="item w-100 d-flex align-items-center" style="height: 100vh">
-     <div class="item__division">
-        <img src="images/bg_slide2.jpg" width="100%" alt="">
-     </div>
-      <div class="item__division division__text">
-        <p class="h1 link_rose valores__corporativos p-0 m-0">Valores <br> Corporativos</p>
-        <h3 class="montserrat p-0 m-0">Mejoramiento continuo.</h3>
-        <p class="text-muted small montserrat p-0 m-0">En Tendencias, no descansamos en mejorar cada proceso en donde la
-satisfacción de cada público objetivos involucrados tantos internos como
-externo sea plena.</p>
-      <div class="nav_owl">
-        <button class="nav_owl_prev"><img src="images/chevron-left-pink.svg" alt=""></button>
-        <button class="nav_owl_next"><img src="images/chevron-right-pink.svg" alt=""></button>
+<section>
+  <div class="slider_we">
+    <div class="weSlide owl-carousel owl-theme">
+      <!-- item 1 -->
+      <div class="item">
+        <div class="bg_slider"><img src="images/bg_slide2.jpg" alt=""></div>
+        <div class="text_we_slider">
+          <p class="h1 link_rose valores__corporativos montserrat fw-800 p-0 m-0">Valores <br> Corporativos</p>
+          <h3 class="montserrat fw-500 text-muted p-0 m-0">Mejoramiento continuo.</h3>
+          <p class="text-muted small montserrat p-0 m-0">En Tendencias, no descansamos en mejorar cada proceso en donde la
+            satisfacción de cada público objetivos involucrados tantos internos como
+          externo sea plena.</p>
+          <div class="nav_owl">
+            <button class="nav_owl_prev"><img src="images/chevron-left-pink.svg" alt=""></button>
+            <button class="nav_owl_next"><img src="images/chevron-right-pink.svg" alt=""></button>
+          </div>
+        </div>
       </div>
+      <!-- item 2 -->
+            <div class="item">
+        <div class="bg_slider"><img src="images/bg_slide2.jpg" alt=""></div>
+        <div class="text_we_slider">
+          <p class="h1 link_rose valores__corporativos montserrat fw-800 p-0 m-0">Valores <br> Corporativos</p>
+          <h3 class="montserrat fw-500 text-muted p-0 m-0">Trabajo en equipo.</h3>
+          <p class="text-muted small montserrat p-0 m-0">Valoramos el esfuerzo individual que se comparte en cada departamento, en cada proceso en pro de contribuir, de aportar a ese trabajo en conjunto a fin de lograr entre todos las metas más sencillas.</p>
+          <div class="nav_owl">
+            <button class="nav_owl_prev"><img src="images/chevron-left-pink.svg" alt=""></button>
+            <button class="nav_owl_next"><img src="images/chevron-right-pink.svg" alt=""></button>
+          </div>
+        </div>
       </div>
-    </div>
-
-    <div class="item w-100 d-flex align-items-center" style="height: 100vh">
-      <div class="item__division">
-        <img src="images/bg_slide2.jpg" width="100%" height="100%" alt="">
-      </div>
-      <div class="item__division division__text">
-        <p class="h1 link_rose valores__corporativos p-0 m-0">Valores <br> Corporativos</p>
-        <h3 class="montserrat p-0 m-0">Trabajo en equipo.</h3>
-        <p class="text-muted small montserrat p-0 m-0">Valoramos el esfuerzo individual que se comparte en cada departamento, en cada proceso en pro de contribuir, de aportar a ese trabajo en conjunto a fin de lograr entre todos las metas más sencillas.</p>
-              <div class="nav_owl">
-        <button class="nav_owl_prev"><img src="images/chevron-left-pink.svg" alt=""></button>
-        <button class="nav_owl_next"><img src="images/chevron-right-pink.svg" alt=""></button>
-      </div>
-      </div>
-    </div>
-
-    <div class="item w-100 d-flex align-items-center" style="height: 100vh">
-     <div class="item__division">
-        <img src="images/bg_slide2.jpg" width="100%" height="100%" alt="">
-     </div>
-      <div class="item__division division__text">
-        <p class="h1 link_rose valores__corporativos p-0 m-0">Valores <br> Corporativos</p>
-        <h1 class="montserrat p-0 m-0">Somos familia.</h1>
-        <p class="text-muted small montserrat p-0 m-0">Como buena familia nos apoyamos en los momentos dificiles, y celebramos cada logro obtenido, acompañandonos en cada etapa de la vida Esos que nos permiten crecer y avanzar en nuestro desarrollo personal. </p>
-              <div class="nav_owl">
-        <button class="nav_owl_prev"><img src="images/chevron-left-pink.svg" alt=""></button>
-        <button class="nav_owl_next"><img src="images/chevron-right-pink.svg" alt=""></button>
-      </div>
+      <!-- item 3 -->
+            <div class="item">
+        <div class="bg_slider"><img src="images/bg_slide2.jpg" alt=""></div>
+        <div class="text_we_slider">
+          <p class="h1 link_rose valores__corporativos montserrat fw-800 p-0 m-0">Valores <br> Corporativos</p>
+          <h3 class="montserrat fw-500 text-muted p-0 m-0">Somos familia.</h3>
+          <p class="text-muted small montserrat p-0 m-0">Como buena familia nos apoyamos en los momentos dificiles, y celebramos cada logro obtenido, acompañandonos en cada etapa de la vida Esos que nos permiten crecer y avanzar en nuestro desarrollo personal.</p>
+          <div class="nav_owl">
+            <button class="nav_owl_prev"><img src="images/chevron-left-pink.svg" alt=""></button>
+            <button class="nav_owl_next"><img src="images/chevron-right-pink.svg" alt=""></button>
+          </div>
+        </div>
       </div>
     </div>
-
   </div>
-</div>
-		</section><!-- end slider nosotros -->
-
+</section>
 
 		<section>
 			<!-- fuerza de ventas  -->

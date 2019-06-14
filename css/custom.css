@@ -537,6 +537,30 @@ footer .red-social-footer a:hover {
     cursor: pointer;
 }
 
+.slider_we {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.bg_slider {
+  width: 100%;
+  height: 100vh;
+}
+
+.bg_slider img {
+  width: 100%;
+  height: 100%;
+}
+.text_we_slider {
+  width: 40%;
+  position: absolute;
+  top: 40%;
+  right: 30px;
+}
+
+
+
 /*colecciones*/
 .banner_c {
   width: 100%;
