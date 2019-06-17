@@ -199,7 +199,8 @@ SLIDESHOW
 
 .collaje {
     margin: auto;
-    width: 55%;
+    width: 45%;
+    width: 100%;
 }
 
 .collaje .owl-item .item {
@@ -1199,6 +1200,18 @@ text-align: center;
   flex-direction: column;
 }
 
+@media only screen and (min-height: 719px) {
+  .collaje {
+    margin-top: -3%;
+  }
+}
+
+@media only screen and (max-height: 720px) {
+  .collaje {
+    margin-top: -8.5%;
+  }
+}
+
 
 /* ============================ */
 /*     MEDIAS QUERY            */
@@ -1206,7 +1219,6 @@ text-align: center;
 
 /* slide show*/
 @media only screen and (max-width: 1270px) {
-
 .caption_carousel h1 {
     font-size: 3rem;
     text-transform: uppercase;

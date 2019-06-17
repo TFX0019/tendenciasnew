@@ -1,4 +1,10 @@
 $(document).ready(function() {
+        if (window.innerHeight > 680) {
+        $('.collaje').addClass('rev_up');
+    } else {
+        $('.collaje').addClass('rev_down');
+    }
+
     // play video de index
     var btnVideo = $('#btn_play_i');
     var videoI = $('#videoI');
@@ -455,17 +461,22 @@ $(document).ready(function() {
     var pvi = {
         btnimg: $('.select_items_collec .item a'),
         visorIMG: $('.visualizador'),
-
+        ItemIMG: $('.article a'), // ejemplo
     }
 
     var mvi = {
         initVisualiz: function() {
             pvi.btnimg.on('click', mvi.mostrarIMG);
+            pvi.ItemIMG.on('click', mvi.mostarIMGItem);
         },
         mostrarIMG: function(e) {
             e.preventDefault();
-            pvi.visorIMG.attr('src', pvi.btnimg.attr('href'))
-            console.log(pvi.btnimg.attr('href'));
+            pvi.visorIMG.attr('src', $(this).attr('href'))
+        },
+        // este metodo tiene que ser una llamada ajax al backend
+        mostarIMGItem: function(e) {
+            e.preventDefault();
+            pvi.visorIMG.attr('src', $(this).attr('href'));
         }
     }
 
