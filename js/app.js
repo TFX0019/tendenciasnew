@@ -347,6 +347,10 @@ $(document).ready(function() {
 
                 }
 
+                if (index == 4 && pagin == 'familia') {
+                    $('.visual_Cont').removeClass('fixedV'); 
+                }
+
                 // if (pagin == 'contacto' && index == 2) {
                 //     $(".main").addClass("fixFooter");
                 // } else {
