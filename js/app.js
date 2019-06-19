@@ -317,7 +317,16 @@ $(document).ready(function() {
                     $('.categorias_title span').fadeIn('fast');
                     cate_p = false;
                     
-                        $('.visual_Cont').removeClass('fixedV'); 
+                        // $('.visual_Cont').removeClass('fixedV'); 
+                }
+
+                if (index == 1 || index == 4) {
+                    $('.visual_Cont').removeClass('fixedV'); 
+                } else {
+                    // fijar visualizador
+                    setTimeout(() => {
+                        $('.visual_Cont').addClass('fixedV'); 
+                    }, 800);
                 }
 
                 if (index > 1) {
@@ -340,15 +349,6 @@ $(document).ready(function() {
                     $('.accordion').hide('fast');
                     $('.categorias_title span').fadeOut('fast');
                     cate_p = false;
-                    // fijar visualizador
-                    setTimeout(() => {
-                        $('.visual_Cont').addClass('fixedV'); 
-                    }, 800);
-
-                }
-
-                if (index == 4 && pagin == 'familia') {
-                    $('.visual_Cont').removeClass('fixedV'); 
                 }
 
                 // if (pagin == 'contacto' && index == 2) {
