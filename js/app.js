@@ -353,7 +353,7 @@ $(document).ready(function() {
                     //animacion contenedor de categorias
                     $('.categorias_c').addClass('animCateg_C');
                     $('.categorias_title img').css('transform', 'rotate(0deg)');
-                    $('.categorias_title').css('padding-left', '9px');
+                    $('.categorias_title').css('padding-left', '10px');
                     $('.accordion').hide('fast');
                     $('.categorias_title span').fadeOut('fast');
                     cate_p = false;

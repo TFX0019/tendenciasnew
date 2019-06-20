@@ -793,9 +793,10 @@ display: block;
   /*border-radius: 0 0 0 75px;*/
 }
 .slect_c {
+  margin-top: 10px;
   text-align: center;
   width: 90%;
-  height: 20vh;
+  height: 17.5vh;
   padding: 10px;
   display: flex;
   justify-content: space-between;
