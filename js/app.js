@@ -5,6 +5,10 @@ $(document).ready(function() {
         $('.collaje').addClass('rev_down');
     }
 
+   setTimeout(function() {
+        $('.figure__').css('visibility', 'visible');
+   },1500)
+
     // play video de index
     var btnVideo = $('#btn_play_i');
     var videoI = $('#videoI');
@@ -310,9 +314,11 @@ $(document).ready(function() {
 
                     //animacion del buscador
                     $('.Search_td').removeClass('SearchAnima');
+                    $('.Search_td img').css('margin-left', '0');
                     //animacion contenedor de categorias
                     $('.categorias_c').removeClass('animCateg_C');
                     $('.categorias_title img').css('transform', 'rotate(45deg)');
+                    $('.categorias_title img').css('margin-left', '0');
                     $('.accordion').show('fast');
                     $('.categorias_title span').fadeIn('fast');
                     cate_p = false;
@@ -343,9 +349,11 @@ $(document).ready(function() {
 
                     //animacion del buscador
                     $('.Search_td').addClass('SearchAnima');
+                    $('.Search_td img').css('margin-left', '-9px');
                     //animacion contenedor de categorias
                     $('.categorias_c').addClass('animCateg_C');
                     $('.categorias_title img').css('transform', 'rotate(0deg)');
+                    $('.categorias_title').css('padding-left', '9px');
                     $('.accordion').hide('fast');
                     $('.categorias_title span').fadeOut('fast');
                     cate_p = false;

@@ -91,11 +91,11 @@ button.close {
 
 .red-social a {
 	padding-right: 10px;
-	color: #bf0067;
+	color: rgb(217,4,102);
 }
 
 .red-social a:hover {
-	color: #bf0067;
+	color: rgb(217,4,102);
 }
 
 .folder-tv {
@@ -127,12 +127,16 @@ button.close {
 .folde-ico span{
   transition: 0.5s;
   color: rgba(217, 4, 102, 1);
+  margin-right: 5px;
+}
+
+.folde-ico img {
+  margin-top: -5px;
 }
 
 .portafolio{
       width: 20px;
       height: 20px;
-      
 }
 .button_c{
 
@@ -167,7 +171,7 @@ SLIDESHOW
 .caption_carousel h2 {
     font-size: 3rem;
     font-family: 'Salmela', sans-serif;
-    color: #bf0067;
+    color: rgb(217,4,102);
     
 }
 
@@ -331,13 +335,18 @@ footer .red-social-footer {
 }
 
 footer .red-social-footer a {
-	color: #bf0067;
+	color: rgb(217,4,102);
 	font-size: 1.3rem;
 	letter-spacing: 1.5rem;
 }
 
 footer .red-social-footer a:hover {
-	color: #bf0067;
+	color: rgb(217,4,102);
+}
+.title_foot {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
 }
 
 
@@ -601,8 +610,9 @@ footer .red-social-footer a:hover {
 .SearchAnima {
   animation: animSearch .7s;
   border-radius: 25px 25px 25px 25px;
-  width: 55px;
-  margin-right: 10px;
+  width: 40px;
+  padding-left: -40px;
+  margin-right: 13.75px;
   
 }
 
@@ -613,8 +623,8 @@ footer .red-social-footer a:hover {
   }
   to {
     border-radius: 25px 25px 25px 25px;
-    width: 55px;
-    margin-right: 10px;
+    width: 40px;
+    margin-right: 13.75px;
   }
 }
 .Search_td input {
@@ -652,7 +662,7 @@ footer .red-social-footer a:hover {
   font-weight: bold;
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
-  padding: 0 20px;
+  padding: 8px 17px;
   cursor: pointer;
   justify-content: flex-end;
   border-radius: 25px 25px 25px 25px;
@@ -663,10 +673,11 @@ footer .red-social-footer a:hover {
 }
 .animCateg_C {
   animation: animatCategorias .7s;
-  width: 60px;
+  width: 40px;
   border-radius: 25px 25px 25px 25px;
-  margin-right: 10px;
+  margin-right: 13.75px;
   height: auto;
+  padding-left: 20px;
 }
 
 @keyframes animatCategorias {
@@ -674,10 +685,11 @@ footer .red-social-footer a:hover {
     border-radius: 25px 0px 0px 0px;
   }
   to {
-    width: 55px;
+    width: 40px;
     border-radius: 25px 25px 25px 25px;
-    margin-right: 10px;
+    margin-right: 13.75px;
     height: auto;
+    padding-left: 20px;
   }
 }
 
@@ -699,6 +711,7 @@ display: block;
 
 .categorias_title img {
   width: 20px;
+  height: 20px;
   transform: rotate(45deg);
   transition: all ease-in-out .3s;
 }
@@ -761,8 +774,8 @@ display: block;
 }
 
 .share_v a {
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   margin-top: 20px;
 }
 
@@ -771,7 +784,7 @@ display: block;
 }
 .slect_c {
   text-align: center;
-  width: 100%;
+  width: 90%;
   height: 20vh;
   padding: 10px;
   display: flex;
@@ -801,7 +814,7 @@ display: block;
 .catep .catep-linkM:hover {
     width: 80%;
     display: block;
-    color: #bf0067;
+    color: rgb(217,4,102);
     text-transform: uppercase;
     padding-left: 3rem;
     font-family: 'Montserrat', sans-serif;
@@ -1026,7 +1039,7 @@ text-align: center;
   margin-top: 10px;
   padding: 10px 10px;
   text-align: center;
-  font-weight: 800;
+  font-weight: 300;
   border-radius: 5px;
 }
 
@@ -1114,6 +1127,7 @@ text-align: center;
   overflow: hidden;
   padding: 0 20px;
   z-index: 5;
+  visibility: hidden;
 }
 
 .figure__ div {
@@ -1146,7 +1160,8 @@ text-align: center;
 }
 
 .revistaBar {
-  width: 60%;
+  width: auto;
+  max-width: 1024px;
   margin: auto;
   background: #fff;
   box-shadow: 0 0 8px rgba(0,0,0,.35);
@@ -1154,7 +1169,7 @@ text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 7px 0;
+  padding: 7px 20px;
   z-index: 4;
 }
 .revistaBar button {
@@ -1194,6 +1209,29 @@ text-align: center;
   color: #555;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
+}
+.catalogo_back, .catalogo_next {
+  position: absolute;
+  z-index: 99;
+  background: none;
+  border: none;
+  top: calc(50% - 25px);
+}
+
+.catalogo_back {
+  left: 9%;
+}
+.catalogo_next {
+  right: 9%;
+}
+
+.catalogo_back img, .catalogo_next img {
+  width: 30px;
+  height: 50px;
+}
+
+.catalogo_back:focus, .catalogo_next:focus {
+  outline: none;
 }
 /*catalogo*/
 .catalogo {
@@ -1235,7 +1273,7 @@ text-align: center;
 .caption_carousel h2 {
     font-size: 3rem;
     font-family: 'Salmela', sans-serif;
-    color: #bf0067;
+    color: rgb(217,4,102);
     
 }
     
