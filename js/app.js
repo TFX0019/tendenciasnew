@@ -295,6 +295,9 @@ $(document).ready(function() {
             responsiveFallback: false,
             loop: false,
             beforeMove: function(index) {
+                if (index != 2) {
+                    $('.wowbook-thumbnails').css('display', 'none');
+                }
 
                 console.log();
                 if (index == 1) {
