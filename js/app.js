@@ -314,7 +314,7 @@ $(document).ready(function() {
 
                     //animacion del buscador
                     $('.Search_td').removeClass('SearchAnima');
-                    $('.Search_td img').css('margin-left', '0');
+                    $('.Search_td img').css('margin-left', '-12px');
                     //animacion contenedor de categorias
                     $('.categorias_c').removeClass('animCateg_C');
                     $('.categorias_title img').css('transform', 'rotate(45deg)');
@@ -349,7 +349,7 @@ $(document).ready(function() {
 
                     //animacion del buscador
                     $('.Search_td').addClass('SearchAnima');
-                    $('.Search_td img').css('margin-left', '-9px');
+                    $('.Search_td img').css('margin-left', '-12px');
                     //animacion contenedor de categorias
                     $('.categorias_c').addClass('animCateg_C');
                     $('.categorias_title img').css('transform', 'rotate(0deg)');
