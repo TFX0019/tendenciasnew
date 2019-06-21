@@ -653,6 +653,10 @@ footer .red-social-footer a:hover {
 .Search_td input::placeholder {
   color: rgb(149,149,149);
 }
+.Search_td img {
+  margin-left: -12px;
+}
+
 .categorias_c {
   width: 195px;
   position: fixed;
