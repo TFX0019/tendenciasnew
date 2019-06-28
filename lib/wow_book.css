@@ -289,6 +289,7 @@ img.wowbook-lazy {
 .wowbook-vertical.wowbook-thumbnails {
 	display: inline-block;
 	height: 100%;
+	border-radius: 0px 25px 25px 0px;
 }
 
 .wowbook-vertical.wowbook-thumbnails .wowbook-clipper {
@@ -296,11 +297,11 @@ img.wowbook-lazy {
 	top: 30px; bottom: 30px; /* this value is the height of the buttons */
 }
 
-.wowbook-vertical.wowbook-thumbnails .wowbook-button {
+/*.wowbook-vertical.wowbook-thumbnails .wowbook-button {
 	height: 30px;
 	width: 100%;
 	background-image: url("../images/arrow_up.png");
-}
+}*/
 
 .wowbook-vertical.wowbook-thumbnails .wowbook-next.wowbook-button {
 	bottom: 0; top: auto;

@@ -24,12 +24,15 @@
 </head>
 
 <body>
+	<button id="go_top">
+  <img src="images/ICONO-BOTÓN-SUBIR.png" alt="">
+</button>
 				<div class="col-md-4 p-0 visual_Cont">
 						<div class="d-flex justify-content-between align-items-end" style="width: 90%; height: 80vh;">
 							<img class="visualizador" src="images/cart1 (2).jpg" width="90%" height="100%" alt="">
 							<div class="share_v">
 								<a href="" data-toggle="tooltip" data-placement="top" download="images/ICONO-DESCARGAR.png" title="Descargar"><img src="images/ICONO-DESCARGAR.png" class="w-100" alt=""></a>
-								<a data-toggle="tooltip" data-placement="top"  title="Compartir en whatsapp" href="https://api.whatsapp.com/send?phone=584127737828&text=https://i.imgur.com/Z7CCiYI.jpg"><img src="images/instagram.png" class="w-100" alt=""></a>
+								<a data-toggle="tooltip" data-placement="top"  title="Compartir en whatsapp" href="https://api.whatsapp.com/send?phone=584127737828&text=https://i.imgur.com/Z7CCiYI.jpg"><img src="images/ICONO-WHATSAPP.png" class="w-100" alt=""></a>
 								<a data-toggle="tooltip" data-placement="top"  href="http://facebook.com/sharer.php?u=facebook.com" title="Compartir con facebook" target="_blank"><img src="images/facebook.png" class="w-100" alt=""></a>
 								<a data-toggle="tooltip" data-placement="top"  href="http://twitter.com/home?status=twitter.com" target="_blank" title="Compartir en twitter"><img src="images/twitter.png" class="w-100" alt=""></a>
 							</div>
@@ -234,9 +237,37 @@
 					</button>
 				</div>
 			</div>
-						<div class="banner_familia wow fadeIn" 
-			style="background: url(images/BANNER-WEB7.jpg);background-repeat: no-repeat;background-size: 100%;background-attachment: fixed;background-position: center center;">
+						<div class="carousel"> <!-- carousel -->
+			<div class="slide owl-carousel owl-theme">
+				<div class="item">
+					<img src="images/BANNER-CARTERAS-WEB.jpg" class="w-100 h-vh-88 full-image-height-slider" alt="">
+<!-- 					<div class="caption_carousel">
+						<h1 class="montserrat wow slideInDown">porque ustedes</h1>
+						<h2 class="wow slideInUp">nos inspiran</h2>
+					</div> -->
+				</div>
+				
+				<div class="item">
+					<img src="images/BANNER-CARTERAS-WEB.jpg" class="w-100 h-vh-88 full-image-height-slider" alt="">
+				</div>
+				
+				<div class="item">
+					<img src="images/BANNER-CARTERAS-WEB.jpg" class="w-100 h-vh-88 full-image-height-slider" alt="">
+				</div>
+				
+				<div class="item">
+					<img src="images/BANNER-CARTERAS-WEB.jpg" class="w-100 h-vh-88 full-image-height-slider" alt="">
+				</div>
+				
+				<div class="item">
+					<img src="images/BANNER-CARTERAS-WEB.jpg" class="w-100 h-vh-88 full-image-height-slider" alt="">
+				</div>
+				
+				<div class="item">
+					<img src="images/BANNER-CARTERAS-WEB.jpg" class="w-100 h-vh-88 full-image-height-slider" alt="">
+				</div>
 			</div>
+			</div><!-- end carousel -->
 
 		</section> <!-- video & slider -->
 
@@ -248,43 +279,43 @@
 						<div class="row pr-4 article-feed">
 							<div class="col-md-3 mt-4 item_col article">
 								<a href="images/cart1 (1).jpg">
-									<img src="images/cart1 (1).jpg" width="100%" alt="">
+									<img src="images/cart1 (1).jpg" width="90%" alt="">
 								</a>
 							</div>
 							<div class="col-md-3 mt-4 item_col article">
 								<a href="images/cart1 (2).jpg">
-									<img src="images/cart1 (2).jpg" width="100%" alt="">
+									<img src="images/cart1 (2).jpg" width="90%" alt="">
 								</a>
 							</div>
 							<div class="col-md-3 mt-4 item_col article">
 								<a href="">
-									<img src="images/cart1 (2).jpg" width="100%" alt="">
+									<img src="images/cart1 (2).jpg" width="90%" alt="">
 								</a>
 							</div>
 							<div class="col-md-3 mt-4 item_col article">
 								<a href="">
-									<img src="images/cart1 (2).jpg" width="100%" alt="">
+									<img src="images/cart1 (2).jpg" width="90%" alt="">
 								</a>
 							</div>
 							<div class="col-md-3 mt-4 item_col article">
 								<a href="">
-									<img src="images/cart1 (2).jpg" width="100%" alt="">
+									<img src="images/cart1 (2).jpg" width="90%" alt="">
 								</a>
 							</div>
 							<div class="col-md-3 mt-4 item_col article">
 								<a href="">
-									<img src="images/cart1 (2).jpg" width="100%" alt="">
+									<img src="images/cart1 (2).jpg" width="90%" alt="">
 								</a>
 							</div>
 
 							<div class="col-md-3 mt-4 item_col article">
 								<a href="">
-									<img src="images/cart1 (2).jpg" width="100%" alt="">
+									<img src="images/cart1 (2).jpg" width="90%" alt="">
 								</a>
 							</div>
 							<div class="col-md-3 mt-4 item_col article">
 								<a href="">
-									<img src="images/cart1 (2).jpg" width="100%" alt="">
+									<img src="images/cart1 (2).jpg" width="90%" alt="">
 								</a>
 							</div>
 						</div>
@@ -437,6 +468,21 @@
 
 		})
 	</script>
+	    <script>
+$(document).ready(function() {
+var owl = $('.slide');
+owl.owlCarousel({
+margin: 10,
+items: 1,
+loop: true,
+dots:false,
+nav:false,
+autoplay:true,
+autoplayTimeout:5000,
+autoplayHoverPause:false
+})
+})
+</script>
 	<script>
 $(".wow").addClass("fixEffect");
 </script>

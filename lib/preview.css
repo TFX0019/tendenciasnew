@@ -336,13 +336,13 @@ nav a {
   background-color: #AA2B2B;
 }
 .wowbook-thumbnails {
-  background: none repeat scroll 0 0 #888;
-  background: none repeat scroll 0 0 rgba(128, 128, 128, 0.48);
-  border-top: 1px solid white;
+  background: none repeat scroll 0 0 #fff;
+  /*border-top: 1px solid white;*/
   border-top-color: rgba(255, 255, 255, 0.5);
   border-bottom: 1px solid gray;
   border-bottom-color: rgba(64, 64, 64, 0.5);
   box-shadow: 0 0 15px rgba(128, 128, 128, 0.48);
+  border-radius: 10px 0 0 0;
 }
 .wowbook-horizontal.wowbook-thumbnails {
   padding-top: 10px;

@@ -295,12 +295,17 @@ $(document).ready(function() {
             responsiveFallback: false,
             loop: false,
             beforeMove: function(index) {
+                $('#go_top').on('click', function() {
+                    $(".main").moveTo(1);
+                })
+
                 if (index != 2) {
                     $('.wowbook-thumbnails').css('display', 'none');
                 }
 
                 console.log();
                 if (index == 1) {
+                    $('#go_top').css('bottom', '-60px')
                     var $this = $(this);
                     var $slidelem = $('.slidebttn');
 
@@ -339,6 +344,7 @@ $(document).ready(function() {
                 }
 
                 if (index > 1) {
+                    $('#go_top').css('bottom', '20px')
                     var $this = $(this);
                     var $slidelem = $('.slidebttn');
                     $slidelem.css("display", "initial");

@@ -28,6 +28,9 @@
 	  <div class=" col-md-6 folder-tv text-right">        
     <a class="button_bLeft slidebttn folde-ico text-uppercase" id="button_bLeft"><span class="fs-smaller fw-600">oficina virtual</span> <img class="portafolio" src='images/portafolio.png' /></a>
   </div>
+  <button id="go_top">
+  <img src="images/ICONO-BOTÓN-SUBIR.png" alt="">
+</button>
 	<div class="main">
 					<section style="overflow: hidden;"> <!-- menu & slider -->
 			<div class="menu">
@@ -91,9 +94,37 @@
 				</div>
 			</div>
 
-      <div class="banner_familia wow fadeIn" 
-      style="background: url(images/BANNER-WEB7.jpg);background-repeat: no-repeat;background-size: 100%;background-attachment: fixed;">
+            <div class="carousel"> <!-- carousel -->
+      <div class="slide owl-carousel owl-theme">
+        <div class="item">
+          <img src="images/BANNER-WEB7.jpg" class="w-100 h-vh-88 full-image-height-slider" alt="">
+<!--          <div class="caption_carousel">
+            <h1 class="montserrat wow slideInDown">porque ustedes</h1>
+            <h2 class="wow slideInUp">nos inspiran</h2>
+          </div> -->
+        </div>
+        
+        <div class="item">
+          <img src="images/BANNER-WEB7.jpg" class="w-100 h-vh-88 full-image-height-slider" alt="">
+        </div>
+        
+        <div class="item">
+          <img src="images/BANNER-WEB7.jpg" class="w-100 h-vh-88 full-image-height-slider" alt="">
+        </div>
+        
+        <div class="item">
+          <img src="images/BANNER-WEB7.jpg" class="w-100 h-vh-88 full-image-height-slider" alt="">
+        </div>
+        
+        <div class="item">
+          <img src="images/BANNER-WEB7.jpg" class="w-100 h-vh-88 full-image-height-slider" alt="">
+        </div>
+        
+        <div class="item">
+          <img src="images/BANNER-WEB7.jpg" class="w-100 h-vh-88 full-image-height-slider" alt="">
+        </div>
       </div>
+      </div><!-- end carousel -->
   
 			</section> <!-- video & slider -->
 
@@ -159,7 +190,7 @@
 
         <!-- vendedora 1 -->
         <div class="d-flex align-items-center mt-5 pt-5 ml-5">
-          <img src="images/woman.svg" alt="" width="40" height="40" class="mr-3">
+          <img src="images/ICONO-CATALOGO-PREMIOS.png" alt="" width="55" height="55" class="mr-3">
           <p class="p-0 m-0">
             <span class="link_rose montserrat"><strong>Catalogo de Premios</strong></span><br>
             <span class="small text-muted montserrat">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis.</span>
@@ -248,12 +279,28 @@
 <script>var paginasTotal = 25;</script>
 <script src="js/jquery.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/owl.carousel.js"></script>
 <script src="js/wow.min.js"></script>
 <script src="js/jquery.onepage-scroll.js"></script>
 <script src="js/bulls.js"></script>
 <script src="js/app.js"></script><!-- revista -->
 <script>
     new WOW().init();
+</script>
+    <script>
+$(document).ready(function() {
+var owl = $('.slide');
+owl.owlCarousel({
+margin: 10,
+items: 1,
+loop: true,
+dots:false,
+nav:false,
+autoplay:true,
+autoplayTimeout:5000,
+autoplayHoverPause:false
+})
+})
 </script>
 <script src="lib/wow_book.min.js"></script>
 <script type="text/javascript">
