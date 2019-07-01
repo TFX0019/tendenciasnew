@@ -130,12 +130,9 @@
 
 
 			<section>
+    <div class="catalogo" style="padding-top: 25px">
         <button id="back" class="catalogo_back" title='go foward one page'><img src="images/ICONO-FLECHA-IZQUIERDA.png" alt=""></button>
         <button id="next" class="catalogo_next" title='goto first page'><img src="images/ICONO-FLECHA-DERECHA.png" alt=""></button>
-
-
-<div class="catalogo" style="padding-top: 25px">
-
     <style>.feature{ background-color: #fff; }</style>
 
     <div id='features'>
@@ -147,18 +144,18 @@
         <div class='feature'><img src='pages/6.png' class='w-100'></div>
     </div> <!-- features -->
 
-    	<div class="revistaBar">
-			<button><img src="images/ICONO-DESCARGAR.png" alt=""><span>Descarga</span></button>
-			<button id='zoomin' title='zoom in'><img src="images/ICONO-AMPLIAR-PAGINA.png" alt=""><span>Ampliar</span></button>
+      <div class="revistaBar">
+      <button><img src="images/ICONO-DESCARGAR.png" alt=""><span>Descarga</span></button>
+      <button id='zoomin' title='zoom in'><img src="images/ICONO-AMPLIAR-PAGINA.png" alt=""><span>Ampliar</span></button>
       <button id='zoomout' title='zoom out'><img src="images/ICONO-AMPLIAR-PAGINA.png" alt=""><span>Reducir</span></button>
-			<button id="thumbs" title="Miniaturas"><img src="images/ICONO-PAGINAS.png" alt=""><span>Páginas</span></button>
-			<button id='fullscreen' title='fullscreen on/off'><img src="images/ICONO-CATALOGO.png" alt=""><span>Pantalla completa</span></button>
-			<div class="revista_pag">
-			<button id="back" title='go foward one page'><img src="images/ICONO-FLECHA-IZQUIERDA.png" alt=""></button>
-			<p class="m-0 p-0"><span id="p_view"></span> / <span id="p_total"></span></p>
-			<button id="next" title='goto first page'><img src="images/ICONO-FLECHA-DERECHA.png" alt=""></button>
-			</div>
-		</div>
+      <button id="thumbs" title="Miniaturas"><img src="images/ICONO-PAGINAS.png" alt=""><span>Páginas</span></button>
+      <button id='fullscreen' title='fullscreen on/off'><img src="images/ICONO-CATALOGO.png" alt=""><span>Pantalla completa</span></button>
+      <div class="revista_pag">
+      <button id="back" title='go foward one page'><img src="images/ICONO-FLECHA-IZQUIERDA.png" alt=""></button>
+      <p class="m-0 p-0"><span id="p_view"></span> / <span id="p_total"></span></p>
+      <button id="next" title='goto first page'><img src="images/ICONO-FLECHA-DERECHA.png" alt=""></button>
+      </div>
+    </div>
 
 </div>
 	<!-- barra -->
@@ -315,6 +312,17 @@ autoplayHoverPause:false
         	flipSound: 1,
         	onShowPage: function(book,page,pageIndex) {
         		 $('#p_view').text(book.currentPage)
+             if (pageIndex == 0) {
+              $('.catalogo_back').hide();
+             } else {
+              $('.catalogo_back').show();
+             }
+             if (pageIndex == page.length) {
+              $('.catalogo_next').hide();
+             } else {
+              $('.catalogo_next').show();
+             }
+             console.log('page: ', pageIndex);
         	}, 
         	controls : {
         	zoomIn    : '#zoomin',

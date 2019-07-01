@@ -503,4 +503,9 @@ $(document).ready(function() {
 
     mvi.initVisualiz();
 
+    // premios rezise
+    $('#thumbs').on('click', function() {
+        $('.catalogo').toggleClass('catalogo_thumb');
+    })
+
 });

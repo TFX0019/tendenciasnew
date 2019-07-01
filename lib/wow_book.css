@@ -229,6 +229,7 @@ img.wowbook-lazy {
 }
 
 .wowbook-thumbnail.wowbook-right {
+	width: 120px;
 	margin-right: 1em;
 }
 
@@ -287,6 +288,8 @@ img.wowbook-lazy {
 /* Thumbnails - vertical */
 
 .wowbook-vertical.wowbook-thumbnails {
+	margin: 0 20px;
+	width: 160px;
 	display: inline-block;
 	height: 100%;
 	border-radius: 0px 25px 25px 0px;

@@ -186,11 +186,17 @@ SLIDESHOW
     display: -o-flex;
     display: flex;
     flex-direction: row;
+    background: url(../images/BANNER-CARTERAS-WEB.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .img__cartera {
     width: 33%;
     height: 77vh;
+    visibility: hidden;
+    opacity: 0;
 }
 
 .h-vh-88{
@@ -796,7 +802,7 @@ display: block;
   /*border-radius: 0 0 0 75px;*/
 }
 .slect_c {
-  margin-top: 10px;
+  margin-top: 7%;
   text-align: center;
   width: 90%;
   height: 17.5vh;
@@ -1124,12 +1130,26 @@ text-align: center;
 .banner_familia img {
   transform: translateY(-13%);
 }
+.cont_figure__ h1 {
+  position: absolute;
+  top: calc(50% - 90px);
+}
+
+.cont_figure__ h3 {
+  position: absolute;
+  top: calc(50% - 40px);
+}
+
+.cont_figure__ p {
+  position: absolute;
+  top: calc(50% - 5px);
+}
 
 .figure__ {
   position: absolute;
   z-index: 4;
   left: 46.5%;
-  top: calc(50% - 60px);
+  top: calc(50% - 50px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1234,7 +1254,7 @@ text-align: center;
   z-index: 99;
   background: none;
   border: none;
-  top: calc(50% - 25px);
+  top: calc(50% - 100px);
 }
 
 .catalogo_back {
@@ -1261,6 +1281,12 @@ text-align: center;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  transition: all ease-in-out .4s;
+}
+
+.catalogo_thumb {
+  width: 80%;
+  left: 20%;
 }
 
 #go_top {
@@ -1283,6 +1309,14 @@ text-align: center;
 #go_top img {
   width: 100%;
   height: 100%;
+}
+
+.tooltip > .tooltip-inner {
+  transition: all ease-in-out .5s; 
+  background-color: #fff; 
+  box-shadow: 0 0 3px rgba(0,0,0,.35); 
+  color: rgba(149,149,149); 
+  font-family: 'Montserrat', sans-serif;
 }
 
 @media only screen and (min-height: 719px) {
