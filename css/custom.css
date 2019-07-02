@@ -1255,7 +1255,7 @@ text-align: center;
   z-index: 99;
   background: none;
   border: none;
-  top: calc(50% - 100px);
+  top: calc(50% -25px);
 }
 
 .catalogo_back {
@@ -1286,8 +1286,8 @@ text-align: center;
 }
 
 .catalogo_thumb {
-  width: 80%;
-  left: 20%;
+  width: 90%;
+  left: 10%;
 }
 
 #go_top {

@@ -205,7 +205,7 @@ img.wowbook-lazy {
 }
 
 .wowbook-thumbnails .wowbook-button {
-	background: none no-repeat 50% 50% #333;
+	/*background: none no-repeat 50% 50% #D94066;*/
 	cursor: pointer;
 	left: 0;
 	position: absolute;
@@ -288,7 +288,7 @@ img.wowbook-lazy {
 /* Thumbnails - vertical */
 
 .wowbook-vertical.wowbook-thumbnails {
-	margin: 0 20px;
+	margin: 0 0px;
 	width: 160px;
 	display: inline-block;
 	height: 100%;
@@ -300,11 +300,11 @@ img.wowbook-lazy {
 	top: 30px; bottom: 30px; /* this value is the height of the buttons */
 }
 
-/*.wowbook-vertical.wowbook-thumbnails .wowbook-button {
+.wowbook-vertical.wowbook-thumbnails .wowbook-button {
 	height: 30px;
 	width: 100%;
-	background-image: url("../images/arrow_up.png");
-}*/
+	background-image: url("../images/ICONO-FLECHA-IZQUIERDA.png");
+}
 
 .wowbook-vertical.wowbook-thumbnails .wowbook-next.wowbook-button {
 	bottom: 0; top: auto;

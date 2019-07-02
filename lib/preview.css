@@ -329,7 +329,7 @@ nav a {
   border-bottom: 1px solid gray;
   border-bottom-color: rgba(64, 64, 64, 0.5);
   box-shadow: 0 0 20px #aa2b2b;
-  padding: 10px 0;
+  padding: 20px 20px;
   position: relative;
 }
 #thumbs_holder .wowbook-button {
@@ -341,7 +341,7 @@ nav a {
   border-top-color: rgba(255, 255, 255, 0.5);
   border-bottom: 1px solid gray;
   border-bottom-color: rgba(64, 64, 64, 0.5);
-  box-shadow: 0 0 15px rgba(128, 128, 128, 0.48);
+  box-shadow: 2px -2px 15px rgba(128, 128, 128, 0.28);
   border-radius: 10px 0 0 0;
 }
 .wowbook-horizontal.wowbook-thumbnails {
