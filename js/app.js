@@ -1,4 +1,18 @@
 $(document).ready(function() {
+/*    console.log($.cookie('msjOficina'))
+    if($.cookie('msjOficina') == 'erase') {
+        $(this).css('display', 'none');
+        alert(Cookies.get('msjOficina'))
+    }*/
+    
+    $('.msj_oficina').on('click', function(e) {
+        e.preventDefault();
+        $(this).addClass('oficina_hide');
+        setTimeout(() => {
+            $(this).css('display', 'none');
+            $.cookie('msjOficina', 'erase', {expires: 7});
+        },500)
+    })
         if (window.innerHeight > 680) {
         $('.collaje').addClass('rev_up');
     } else {
@@ -252,43 +266,6 @@ $(document).ready(function() {
      */
     var office = $("#office");
 
-    $('.slidebttn').hover(
-        function() {
-            var $this = $(this);
-            var $slidelem = $('.slidebttn');
-
-            $slidelem.stop().animate({
-                'width': '195px',
-                'margin-right': '0px',
-                'display': 'initial',
-                borderTopLeftRadius: 25,
-                borderTopRightRadius: 0,
-                borderBottomLeftRadius: 25,
-                borderBottomRightRadius: 0
-            }, 300);
-            $slidelem.find('span').stop(true, true).delay(800).fadeIn();
-
-            $this.removeClass('button_c');
-        },
-        function() {
-            var $this = $(this);
-            var $slidelem = $('.slidebttn');
-
-            $slidelem.stop().animate({
-                'width': '55px',
-                'border-radius': '50%',
-                'margin-right': '10px'
-            }, 600);
-
-            $slidelem.find('span').stop(true, true).fadeOut("fast");
-
-            $this.addClass('button_c');
-
-        }
-    );
-
-
-
     $(document).ready(function() {
         $(".main").onepage_scroll({
             sectionContainer: "section",
@@ -344,6 +321,42 @@ $(document).ready(function() {
                 }
 
                 if (index > 1) {
+                                    $('.slidebttn').hover(
+        function() {
+            var $this = $(this);
+            var $slidelem = $('.slidebttn');
+
+            $slidelem.stop().animate({
+                'width': '195px',
+                'margin-right': '0px',
+                'display': 'initial',
+                borderTopLeftRadius: 25,
+                borderTopRightRadius: 0,
+                borderBottomLeftRadius: 25,
+                borderBottomRightRadius: 0
+            }, 300);
+            $slidelem.find('span').stop(true, true).delay(800).fadeIn();
+
+            $this.removeClass('button_c');
+        },
+        function() {
+            var $this = $(this);
+            var $slidelem = $('.slidebttn');
+
+            $slidelem.stop().animate({
+                'width': '55px',
+                'border-radius': '50%',
+                'margin-right': '10px'
+            }, 600);
+
+            $slidelem.find('span').stop(true, true).fadeOut("fast");
+
+            $this.addClass('button_c');
+
+        }
+    );
+
+                    
                     $('#go_top').css('bottom', '20px')
                     var $this = $(this);
                     var $slidelem = $('.slidebttn');
@@ -367,6 +380,7 @@ $(document).ready(function() {
                     $('.categorias_title span').fadeOut('fast');
                     cate_p = false;
                 }
+                
 
                 // if (pagin == 'contacto' && index == 2) {
                 //     $(".main").addClass("fixFooter");
@@ -507,5 +521,4 @@ $(document).ready(function() {
     $('#thumbs').on('click', function() {
         $('.catalogo').toggleClass('catalogo_thumb');
     })
-
 });

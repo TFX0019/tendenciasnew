@@ -317,12 +317,14 @@ autoplayHoverPause:false
              } else {
               $('.catalogo_back').show();
              }
-             if (pageIndex == page.length) {
+             if (pageIndex == book.pages.length-1) {
               $('.catalogo_next').hide();
              } else {
               $('.catalogo_next').show();
              }
-             console.log('page: ', pageIndex);
+            $('#p_total').text(book.pages.length);
+            $('#p_view').text(pageIndex+1);
+             console.log('page: ', book.pages.length);
         	}, 
         	controls : {
         	zoomIn    : '#zoomin',
@@ -337,8 +339,6 @@ autoplayHoverPause:false
             fullscreen : '#fullscreen'
         }}).css({'display':'none', 'margin':'auto', 'margin-top': '2%','margin-bottom': '10px'}).fadeIn(1000);
         var book = $.wowBook("#features");
-        $('#p_total').text(book.pages.length);
-        $('#p_view').text(book.currentPage);
         var clp = 1;
         $('#zoomin').on('click', function() {
           if(clp >= 1) {

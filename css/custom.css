@@ -799,6 +799,7 @@ display: block;
 }
 
 .visualizador {
+    height: 75vh;
   /*border-radius: 0 0 0 75px;*/
 }
 .slect_c {
@@ -1315,8 +1316,11 @@ text-align: center;
   transition: all ease-in-out .5s; 
   background-color: #fff; 
   box-shadow: 0 0 3px rgba(0,0,0,.35); 
-  color: rgba(149,149,149); 
   font-family: 'Montserrat', sans-serif;
+    border-radius: none;
+    color: #D90466;
+    font-weight: bold;
+    padding: 7px;
 }
 
 @media only screen and (min-height: 719px) {
@@ -1331,6 +1335,33 @@ text-align: center;
   }
 }
 
+.msj_oficina {
+    position: absolute;
+    background: #fff;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 99;
+    transition: all ease-in-out .3s;
+}
+.oficina_hide {
+    bottom: -100px;
+}
+.msj_oficina p {
+    margin: 0;
+    text-align: center;
+    color: rgb(149,149,149);
+    font-family: 'Montserrat', sans-serif;
+    padding: 20px 0;
+}
+
+.msj_oficina p a {
+    background: #D90466;
+    color: white;
+    padding: 10px 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
 
 /* ============================ */
 /*     MEDIAS QUERY            */
