@@ -273,7 +273,7 @@
 
 		</section> <!-- video & slider -->
 
-		<section style="height: 100vh; align-items: center;">
+		<section class="d-flex align-items-center" style="height: 100vh;">
 			<div style="margin-right: 70px;">
 				<div class="row">
 					<div class="col-md-4"></div>
@@ -328,7 +328,7 @@
 		</section>
 
 
-		<section>
+		<section class="d-flex align-items-center" style="height: 100vh;">
 				<div style="margin-right: 70px;">
 					<div class="row">
 						<div class="col-md-4">
@@ -449,28 +449,22 @@
 		$(document).ready(function () {
 			var owl = $('.select_items_collec');
 			owl.owlCarousel({
+				center: true,
 				margin: 5,
 				items: 4,
-				loop: false,
+				loop: true,
 				dots: false,
 				nav: false,
 				autoplay: false,
 				autoplayHoverPause: false
 			})
-
-			$('#next').click(function () {
-				owl.trigger('next.owl.carousel');
-				// setTimeOut(function() {
-
-				// },50)
-				
-			});
-			$('#prev').click(function () {
-				owl.trigger('prev.owl.carousel');
-			});
-			$(function () {
-  $('[data-toggle="tooltip"]').tooltip()
-})
+			owl.on('changed.owl.carousel', function(e) {
+				$('.visualizador').attr('src', owl.find('a')[e.item.index].getAttribute('href'));
+				console.log(e.item.index);
+			})
+			$('#next').click(function () {owl.trigger('next.owl.carousel');});
+			$('#prev').click(function () {owl.trigger('prev.owl.carousel');});
+			$(function () {$('[data-toggle="tooltip"]').tooltip()})
 
 		})
 	</script>

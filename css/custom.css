@@ -813,6 +813,14 @@ display: block;
   align-items: center;
   overflow: hidden;
 }
+
+@media only screen and (min-height: 720px) {
+  .slect_c {
+    margin-top: 3%;
+    height: 21.5vh;
+  }
+}
+
 .slect_c button {
   background: none;
   width: 20px;
