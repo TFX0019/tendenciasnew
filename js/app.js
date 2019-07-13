@@ -283,20 +283,9 @@ $(document).ready(function() {
                 console.log();
                 if (index == 1) {
                     $('#go_top').css('bottom', '-60px')
-                    var $this = $(this);
-                    var $slidelem = $('.slidebttn');
-
-                    $slidelem.stop().animate({
-                        'width': '195px',
-                        'margin-right': '0px',
-                        'display': 'initial',
-                        borderTopLeftRadius: 25,
-                        borderTopRightRadius: 0,
-                        borderBottomLeftRadius: 25,
-                        borderBottomRightRadius: 0
-                    }, 300);
-                    $slidelem.find('span').stop(true, true).delay(800).fadeIn();
-
+                    //animar portafolio
+                    $('.btn_portafolio').removeClass('PortafolioAnimation');
+                    $('.btn_portafolio').find('span').removeClass('spanPortafolio')
                     //animacion del buscador
                     $('.Search_td').removeClass('SearchAnima');
                     $('.Search_td img').css('margin-left', '-12px');
@@ -321,54 +310,10 @@ $(document).ready(function() {
                 }
 
                 if (index > 1) {
-                                    $('.slidebttn').hover(
-        function() {
-            var $this = $(this);
-            var $slidelem = $('.slidebttn');
-
-            $slidelem.stop().animate({
-                'width': '195px',
-                'margin-right': '0px',
-                'display': 'initial',
-                borderTopLeftRadius: 25,
-                borderTopRightRadius: 0,
-                borderBottomLeftRadius: 25,
-                borderBottomRightRadius: 0
-            }, 300);
-            $slidelem.find('span').stop(true, true).delay(800).fadeIn();
-
-            $this.removeClass('button_c');
-        },
-        function() {
-            var $this = $(this);
-            var $slidelem = $('.slidebttn');
-
-            $slidelem.stop().animate({
-                'width': '55px',
-                'border-radius': '50%',
-                'margin-right': '10px'
-            }, 600);
-
-            $slidelem.find('span').stop(true, true).fadeOut("fast");
-
-            $this.addClass('button_c');
-
-        }
-    );
-
-                    
                     $('#go_top').css('bottom', '20px')
-                    var $this = $(this);
-                    var $slidelem = $('.slidebttn');
-                    $slidelem.css("display", "initial");
-                    $slidelem.stop().animate({
-                        'width': '55px',
-                        'border-radius': '50%',
-                        'margin-right': '10px'
-                    }, 400);
-
-                    $slidelem.find('span').stop(true, true).fadeOut();
-
+                    //animar portafolio
+                    $('.btn_portafolio').addClass('PortafolioAnimation');
+                    $('.btn_portafolio').find('span').addClass('spanPortafolio')
                     //animacion del buscador
                     $('.Search_td').addClass('SearchAnima');
                     $('.Search_td img').css('margin-left', '-12px');

@@ -82,7 +82,6 @@ button.close {
 .nav .nav-item .nav-link:hover {
 	color: #D90466;
 }
-
 .red-social {
 	position: absolute;
 	top: 2.5em;
@@ -97,49 +96,72 @@ button.close {
 .red-social a:hover {
 	color: #D90466;
 }
-
-.folder-tv {
-	position: fixed;
-	top: 20px;
-	right: 0px;
-	padding-right: 0;
-	margin-right: 0;
-	z-index: 99;
+.btn_portafolio {
+  position: fixed;
+  width: 210px;
+  top: 20px;
+  right: 0;
+  z-index: 99;
   cursor: pointer;
-
-
-}
-
-.folde-ico {
-  display: inline-block;
 	padding: 12px 17px;
 	background: #fff;
-	box-shadow: 0 0 10px rgba(0,0,0,.15);
-	border-radius: 25px 0 0 25px;
-	color: #D90466;
-	font-family: 'Montserrat', sans-serif;
-  transition: 0.5s;
-}
-.folde-ico:hover {
-	color: #D90466;
-	text-decoration: none;
-}
-.folde-ico span{
-  transition: 0.5s;
+	box-shadow: 0 0 10px rgba(0, 0, 0, .35);
+  border-radius: 25px 0 0 25px;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   color: #D90466;
-  margin-right: 5px;
+  border: none;
+  transition: all ease-in-out .5s;
+}
+.btn_portafolio img {
+  width: 20px;
+  height: 20px;
+  margin-right: -5px;
 }
 
-.folde-ico img {
-  margin-top: -5px;
+.btn_portafolio span {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  padding-right: 10px;
+  transition: all ease-in-out .5s;
 }
 
-.portafolio{
-      width: 20px;
-      height: 20px;
+.PortafolioAnimation {
+  animation: PortafolioAnimation .7s;
+  border-radius: 25px 25px 25px 25px;
+  width: 45px;
+  padding-left: -40px;
+  margin-right: 13.75px;
 }
-.button_c{
+.spanPortafolio {
+  display: none;
+}
+@keyframes PortafolioAnimation {
+  from {
+    border-radius: 25px 0px 0px 25px;
+    width: 210px;
+  }
 
+  to {
+    border-radius: 25px 0 0 25px;
+    width: 45px;
+    margin-right: 13.75px;
+  }
+}
+.btn_portafolio:hover {
+    border-radius: 25px 0 0 25px;
+    width: 210px;
+    margin-right: 0;
+}
+.btn_portafolio:hover span {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+.btn_portafolio:focus {
+  outline: none;
 }
 .bg-pink-hr{
     border-top: 1px solid #D90466;
