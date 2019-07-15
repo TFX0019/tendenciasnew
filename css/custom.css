@@ -700,24 +700,18 @@ footer .red-social-footer a:hover {
   border-radius: 25px 0px 0px 0px;
 }
 
+.categorias_c::-webkit-scrollbar {
+    width: 8px;
+}
+
+.categorias_c::-webkit-scrollbar-track {
+    background: #ccc;
+    border-radius: 4px;
+}
+
 .categorias_c::-webkit-scrollbar-thumb {
-  background: #D90466;
-  border-radius: 4px;
-  height: 10px;
-}
-
-.categorias_c::-webkit-scrollbar-thumb:active {
-  background: #D90466;
-  height: 10px;
-}
-
-.categorias_c::scrollbar-thumb {
-  background: #D90466;
-  border-radius: 4px;
-}
-
-.categorias_c::scrollbar-thumb:active {
-  background: #D90466;
+    background: #D90466;
+    border-radius: 4px;
 }
 
 .categorias_c .categorias_title {
