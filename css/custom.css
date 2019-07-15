@@ -687,7 +687,8 @@ footer .red-social-footer a:hover {
 
 .categorias_c {
   width: 195px;
-  height: 80%;
+  height: auto;
+  max-height: 78%;
   overflow-y: scroll;
   position: fixed;
   z-index: 4;
@@ -702,10 +703,12 @@ footer .red-social-footer a:hover {
 .categorias_c::-webkit-scrollbar-thumb {
   background: #D90466;
   border-radius: 4px;
+  height: 10px;
 }
 
 .categorias_c::-webkit-scrollbar-thumb:active {
   background: #D90466;
+  height: 10px;
 }
 
 .categorias_c::scrollbar-thumb {
