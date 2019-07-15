@@ -699,6 +699,11 @@ footer .red-social-footer a:hover {
   border-radius: 25px 0px 0px 0px;
 }
 
+.categorias_c::-webkit-scrollbar-thumb {
+  background: #D90466;
+  border-radius: 4px;
+}
+
 .categorias_c .categorias_title {
   display: flex;
   color: #D90466;
